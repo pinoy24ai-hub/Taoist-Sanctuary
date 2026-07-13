@@ -4,22 +4,14 @@
 # media-manifest.json to map each local file to its clean bucket key
 # (e.g. Ch_1_Escape_the_cage_of_modern_labels.m4a -> podcasts/ch-01.m4a).
 #
-# ONE-TIME SETUP (do this once per machine):
-#   1. Install rclone: https://rclone.org/downloads/
-#   2. Get from the Cloudflare dashboard (R2 > Manage R2 API Tokens):
-#        - Account ID
-#        - Access Key ID + Secret Access Key (create an R2 API token)
-#   3. Configure an rclone remote named "r2":
-#        rclone config
-#        > n (new remote)
-#        > name: r2
-#        > type: Amazon S3 Compliant Storage Providers (s3)
-#        > provider: Cloudflare R2
-#        > access_key_id / secret_access_key: (from step 2)
-#        > endpoint: https://<ACCOUNT_ID>.r2.cloudflarestorage.com
-#      (rclone will prompt for these interactively -- accept defaults elsewhere)
-#   4. Create the bucket once (only needs doing the first time):
-#        rclone mkdir r2:tao-media
+# Uses the Wrangler CLI (Cloudflare's official tool), not rclone -- Wrangler
+# is already installed and authenticated on this machine.
+#
+# ONE-TIME SETUP (only if wrangler isn't installed/authenticated yet):
+#   1. npm install -g wrangler
+#   2. wrangler login   (opens a browser tab to authorize against your
+#      Cloudflare account -- click Allow)
+#   3. Confirm it worked: wrangler whoami
 #
 # EVERY TIME you add new chapter files:
 #   1. Drop the new Ch_N_Title.m4a / Ch_N_Title.mp4 files into
@@ -30,22 +22,22 @@
 #      the site (or run scripts/merge-media-manifest.js yourself and hand the
 #      updated chaptersData.js back to Claude to reassemble app.js/index.html).
 #
-# This script only uploads files that are new or changed (rclone copyto
-# compares size/checksum), so it's safe to re-run any time.
+# This script always re-uploads whatever's listed in the manifest (wrangler's
+# object put has no built-in skip-if-unchanged check), so it's safe to re-run
+# but re-uploads everything each time -- fine at this file count/size.
 
 set -euo pipefail
 
 # --- Configuration -----------------------------------------------------
-R2_REMOTE="r2"          # the rclone remote name you configured above
-R2_BUCKET="tao-media"   # TODO: change to your actual bucket name
+R2_BUCKET="taoism"   # bucket name as shown in the Cloudflare R2 dashboard
 # ------------------------------------------------------------------------
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 MANIFEST="$ROOT_DIR/media-manifest.json"
 
-if ! command -v rclone >/dev/null 2>&1; then
-    echo "ERROR: rclone is not installed or not on PATH. See the setup instructions at the top of this script." >&2
+if ! command -v wrangler >/dev/null 2>&1; then
+    echo "ERROR: wrangler is not installed or not on PATH. See the setup instructions at the top of this script." >&2
     exit 1
 fi
 
@@ -54,24 +46,33 @@ if [ ! -f "$MANIFEST" ]; then
     exit 1
 fi
 
-echo "Reading manifest and uploading to r2:$R2_BUCKET ..."
+echo "Reading manifest and uploading to R2 bucket \"$R2_BUCKET\" via wrangler..."
 
-python3 - "$MANIFEST" "$ROOT_DIR" "$R2_REMOTE" "$R2_BUCKET" << 'PYEOF'
+python3 - "$MANIFEST" "$ROOT_DIR" "$R2_BUCKET" << 'PYEOF'
 import json
 import subprocess
 import sys
 
-manifest_path, root_dir, remote, bucket = sys.argv[1:5]
+manifest_path, root_dir, bucket = sys.argv[1:4]
 
 with open(manifest_path, encoding='utf-8') as f:
     manifest = json.load(f)
 
+def content_type(ext):
+    return 'audio/x-m4a' if ext == '.m4a' else 'video/mp4'
+
 def upload(kind, folder, entries):
     for num, entry in sorted(entries.items(), key=lambda kv: int(kv[0])):
         local_path = f"{root_dir}/{folder}/{entry['localFile']}"
-        remote_path = f"{remote}:{bucket}/{entry['r2Key']}"
-        print(f"  [{kind} ch {num}] {entry['localFile']} -> {remote_path}")
-        subprocess.run(['rclone', 'copyto', local_path, remote_path, '--progress'], check=True)
+        r2_key = entry['r2Key']
+        ext = '.' + r2_key.rsplit('.', 1)[-1]
+        print(f"  [{kind} ch {num}] {entry['localFile']} -> {bucket}/{r2_key}")
+        subprocess.run([
+            'wrangler', 'r2', 'object', 'put', f"{bucket}/{r2_key}",
+            '--file', local_path,
+            '--ct', content_type(ext),
+            '--remote'
+        ], check=True)
 
 upload('podcast', 'r2-podcasts', manifest.get('podcasts', {}))
 upload('explainer', 'r2-explainers', manifest.get('explainers', {}))

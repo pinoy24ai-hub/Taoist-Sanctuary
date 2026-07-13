@@ -29,8 +29,8 @@ so media is served from there while the site itself (`index.html`, `js/`,
   fields. Chapters with no media simply get no field, and the site's UI
   already hides Listen/Watch buttons accordingly.
 - `r2-sync.sh` -- uploads whatever's in the manifest to your Cloudflare R2
-  bucket via `rclone`, using the clean key names rather than the original
-  descriptive filenames.
+  bucket via the `wrangler` CLI, using the clean key names rather than the
+  original descriptive filenames.
 
 ## Workflow for adding new chapter media
 
@@ -38,8 +38,8 @@ so media is served from there while the site itself (`index.html`, `js/`,
    you have ready -- partial batches are fine, the site only shows Listen/
    Watch for chapters that actually have media).
 2. `python3 scripts/generate-media-manifest.py`
-3. `bash scripts/r2-sync.sh` (see the one-time rclone setup notes inside that
-   script the first time you run it)
+3. `bash scripts/r2-sync.sh` (uses wrangler, already authenticated on this
+   machine -- see the setup notes inside that script if it ever needs re-auth)
 4. `node scripts/merge-media-manifest.js` -- updates `chaptersData.js` in this
    folder.
 5. Hand the updated `chaptersData.js` to Claude (or run the equivalent build
@@ -54,13 +54,14 @@ task, it's worth revisiting that -- having the site `fetch()` `chaptersData.js`
 2-4 update the live site on their own, without a rebuild step. Worth a
 separate conversation once the cadence of adding chapters is clearer.
 
-## One-time setup you still need to do
+## One-time setup (already done on this machine)
 
-- Create the R2 bucket in the Cloudflare dashboard (or via
-  `rclone mkdir r2:tao-media` once rclone is configured -- see `r2-sync.sh`).
-- Enable public access on the bucket and point a custom (sub)domain at it,
-  e.g. `media.taoism.prof-elf.org`, via Cloudflare's dashboard.
-- Once that domain is live, update `R2_MEDIA_BASE_URL` in `js/app.js` (and the
-  matching `media-src` entry in `netlify.toml`'s Content-Security-Policy) to
-  match. Both are currently set to `https://media.taoism.prof-elf.org` as a
-  placeholder -- change both together if you pick a different domain.
+- The R2 bucket (`taoism`) exists, has public access enabled, and is served
+  at `https://pub-67ec229a129543a2968c7362a1737135.r2.dev` -- this is already
+  wired into `R2_MEDIA_BASE_URL` in `js/app.js` and the `media-src` entry in
+  `netlify.toml`'s Content-Security-Policy. Only touch those two if you ever
+  move to a different bucket or a custom domain.
+- `wrangler` is installed and authenticated (`wrangler whoami` should show
+  your Cloudflare account). If it ever says "not logged in": run
+  `npm install -g wrangler` then `wrangler login` and approve the browser
+  prompt.
