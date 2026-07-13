@@ -1,0 +1,10 @@
+# These are local staging/tooling files for the R2 media pipeline, not part
+# of the actual website. They should never be uploaded to Netlify: the media
+# files are large, meant to live in Cloudflare R2 (not Netlify), and the
+# scripts/manifest/chaptersData.js are just source-of-truth references for
+# rebuilding the site, not runtime assets.
+r2-podcasts/
+r2-explainers/
+scripts/
+chaptersData.js
+media-manifest.json

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sanctuary of Tao - Interactive Philosophy Experience</title>
+    <meta name="description" content="Explore all 81 chapters of the Tao Te Ching in bilingual Chinese and English, with an interactive Wu Wei stream simulator, a daily wisdom oracle, and a guided breathing chamber.">
+    <meta property="og:title" content="The Sanctuary of Tao">
+    <meta property="og:description" content="A bilingual, interactive walk through the complete Tao Te Ching — all 81 chapters, plus a Wu Wei physics simulator and breathing coach.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23134e4a' d='M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 10c22.1 0 40 17.9 40 40S72.1 90 50 90V50C50 39 41 30 30 30s-20 9-20 20S17.9 10 50 10z'/%3E%3Ccircle cx='50' cy='25' r='5' fill='%23fff'/%3E%3Ccircle cx='50' cy='75' r='5' fill='%23134e4a'/%3E%3C/svg%3E">
+    <!-- Compiled, purged production stylesheet (Tailwind build + custom rules) -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts for premium serif headers and clean body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@1.24.0/dist/umd/lucide.min.js" async></script>
+</head>
+<body class="bg-parchment-100 text-stone-800 dark:bg-obsidian-950 dark:text-stone-200 min-h-screen relative overflow-x-hidden selection:bg-teal-800 selection:text-white">
+
+    <!-- Ink Wash Ambient Vector Backgrounds -->
+    <div class="absolute top-0 left-0 w-full h-[800px] pointer-events-none opacity-20 dark:opacity-40 mix-blend-multiply dark:mix-blend-screen overflow-hidden">
+        <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="absolute -top-40 -left-40 w-[600px] h-[600px] drift">
+            <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#FDFBF7" stop-opacity="0"/>
+            </radialGradient>
+            <circle cx="500" cy="500" r="400" fill="url(#grad1)" />
+        </svg>
+        <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="absolute top-[300px] -right-40 w-[700px] h-[700px] drift" style="animation-delay: -3s;">
+            <radialGradient id="grad2" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#FDFBF7" stop-opacity="0"/>
+            </radialGradient>
+            <circle cx="500" cy="500" r="400" fill="url(#grad2)" />
+        </svg>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-parchment-100/80 dark:bg-obsidian-950/80 border-b border-stone-200/50 dark:border-stone-800/50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- Inline Yin-Yang Icon -->
+                <svg class="w-8 h-8 text-teal-700 dark:text-teal-400 transform transition-transform group-hover:rotate-180 duration-1000" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 10c22.1 0 40 17.9 40 40S72.1 90 50 90V50C50 39 41 30 30 30s-20 9-20 20S17.9 10 50 10z"/>
+                    <circle cx="50" cy="25" r="5" class="fill-white dark:fill-obsidian-950"/>
+                    <circle cx="50" cy="75" r="5" class="fill-stone-800 dark:fill-stone-100"/>
+                </svg>
+                <div>
+                    <span class="serif-title text-xl font-semibold tracking-wider text-stone-900 dark:text-white">道德經</span>
+                    <span class="text-xs block text-stone-500 dark:text-teal-400 tracking-widest uppercase">The Way & Virtue</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#philosophy" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Core Pillars</a>
+                <a href="#simulator" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Wu Wei Stream</a>
+                <a href="#verses" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">81 Chapters</a>
+                <a href="#meditation" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Breathe Space</a>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-4">
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()" aria-label="Toggle light and dark theme" class="p-2 rounded-full border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/50 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors" title="Toggle Balance (Yin/Yang)">
+                    <i data-lucide="sun" class="w-4 h-4 text-amber-500 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-4 h-4 text-teal-800 block dark:hidden"></i>
+                </button>
+                <a href="#verses" class="hidden sm:inline-block bg-teal-800 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-500 text-white text-xs px-4 py-2 rounded-full font-medium tracking-wide transition-all duration-300">
+                    Seek Wisdom
+                </a>
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false" id="mobile-menu-btn" class="md:hidden p-2 rounded-full border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/50 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                    <i data-lucide="menu" class="w-4 h-4 text-stone-700 dark:text-stone-200"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200/50 dark:border-stone-800/50 bg-parchment-100 dark:bg-obsidian-950">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+                <a href="#philosophy" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Core Pillars</a>
+                <a href="#simulator" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Wu Wei Stream</a>
+                <a href="#verses" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">81 Chapters</a>
+                <a href="#meditation" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Breathe Space</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Sanctuary Section -->
+    <header class="max-w-6xl mx-auto px-6 pt-16 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/40 border border-teal-200/50 dark:border-teal-900/50 text-teal-800 dark:text-teal-300 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+                The Gateway to Peace
+            </div>
+            <h1 class="serif-title text-4xl sm:text-5xl lg:text-6xl font-light leading-tight text-stone-900 dark:text-white">
+                Living in Alignment <br>
+                <span class="font-semibold italic text-teal-800 dark:text-teal-400">with the Infinite Flow</span>
+            </h1>
+            <p class="text-stone-600 dark:text-stone-400 text-lg max-w-xl leading-relaxed">
+                Taoism is not a system of rigid dogma, but a quiet recognition of natural patterns. Step into Laozi's ancient sanctuary and discover how softness defeats strength, silence speaks truth, and non-action brings total harmony.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="#simulator" class="flex items-center gap-2 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-stone-200 text-white dark:text-stone-950 px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:-translate-y-0.5">
+                    Explore Wu Wei Flow
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <button onclick="drawOracleCard()" aria-label="Draw a new oracle reflection" class="flex items-center gap-2 border border-stone-300 dark:border-stone-700 hover:bg-white dark:hover:bg-stone-900 px-6 py-3 rounded-xl font-medium transition-all duration-300">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i>
+                    Consult the Oracle
+                </button>
+            </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center relative">
+            <div class="w-full max-w-[350px] aspect-[4/5] bg-white dark:bg-stone-900 rounded-3xl p-8 border border-stone-200 dark:border-stone-800 flex flex-col justify-between shadow-xl transition-all duration-500 hover:scale-[1.02] ink-glow">
+                <div class="flex justify-between items-start">
+                    <div class="text-teal-700 dark:text-teal-400">
+                        <i data-lucide="quote" class="w-8 h-8 opacity-40"></i>
+                    </div>
+                    <span id="oracle-badge" class="text-xs uppercase tracking-widest text-stone-400 font-medium">Daily Reflection</span>
+                </div>
+                <div class="my-6 space-y-4">
+                    <p id="oracle-text" class="serif-title text-xl text-stone-800 dark:text-stone-100 leading-relaxed font-light transition-opacity duration-300 ease-in-out">
+                        "The highest goodness resembles water. Water greatly benefits myriad things without contention."
+                    </p>
+                    <p id="oracle-source" class="text-xs text-teal-700 dark:text-teal-400 tracking-wide font-semibold transition-opacity duration-300 ease-in-out">
+                        — Chapter 8, The Way of Water
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-stone-100 dark:border-stone-800 flex flex-col gap-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-stone-400">Let your thoughts settle like silt.</span>
+                        <button onclick="drawOracleCard()" aria-label="Draw another oracle reflection" class="text-xs text-teal-600 hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-300 font-medium flex items-center gap-1">
+                            Draw another <i data-lucide="refresh-cw" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                    <button onclick="openArticleModalFromOracle()" aria-label="Read the full article for this chapter" class="text-xs text-amber-700 hover:text-amber-900 dark:text-amber-400 dark:hover:text-amber-300 font-semibold flex items-center gap-1 self-start">
+                        <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Read Full Article
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Pillars Grid -->
+    <section id="philosophy" class="max-w-6xl mx-auto px-6 py-20 border-t border-stone-200/50 dark:border-stone-800/50">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 class="serif-title text-3xl sm:text-4xl font-semibold text-stone-900 dark:text-white">The Core Pillars of the Tao</h2>
+            <p class="text-stone-600 dark:text-stone-400">Discover the foundational patterns of the cosmos, drawn from the classical text of the Tao Te Ching.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Pillar 1 -->
+            <div class="group bg-white dark:bg-stone-900/60 p-8 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 hover:border-teal-500/50 hover:dark:border-teal-400/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                        <i data-lucide="infinity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">The Nature of Tao</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                        The "Way" is the nameless, infinite source of heaven, earth, and the myriad things. It represents the natural rhythm of the universe, prior to labeling and human definitions.
+                    </p>
+                </div>
+                <button onclick="openPillarModal('tao')" class="mt-6 text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                    MEDITATE ON THIS <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="group bg-white dark:bg-stone-900/60 p-8 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 hover:border-teal-500/50 hover:dark:border-teal-400/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                        <i data-lucide="wind" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">Wu Wei (无为)</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                        "Effortless action" or non-contrivance. Working in harmony with gravity, current, and circumstances. Acting with detached wisdom so nothing remains unaccomplished.
+                    </p>
+                </div>
+                <button onclick="openPillarModal('wuwei')" class="mt-6 text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                    MEDITATE ON THIS <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="group bg-white dark:bg-stone-900/60 p-8 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 hover:border-teal-500/50 hover:dark:border-teal-400/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                        <i data-lucide="droplet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">Water & Softness</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                        The ultimate paradigm of strength is the softest thing. Water benefits everything without fighting, moves to low places, and overrides the most solid stone over time.
+                    </p>
+                </div>
+                <button onclick="openPillarModal('water')" class="mt-6 text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                    MEDITATE ON THIS <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="group bg-white dark:bg-stone-900/60 p-8 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 hover:border-teal-500/50 hover:dark:border-teal-400/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                        <i data-lucide="gem" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">The Three Treasures</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                        Laozi's three virtues to guard: Compassion (which enables courage), Simplicity/Conservation (which allows vast reach), and Humility (not daring to be ahead, ensuring leadership).
+                    </p>
+                </div>
+                <button onclick="openPillarModal('treasures')" class="mt-6 text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                    MEDITATE ON THIS <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="group bg-white dark:bg-stone-900/60 p-8 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 hover:border-teal-500/50 hover:dark:border-teal-400/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                        <i data-lucide="arrow-up-down" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">Complementary Duality</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                        Opposites mutually define each other. When beauty is recognized, ugliness is generated; being and non-being are twins. The wise seek balance instead of one-sided extremes.
+                    </p>
+                </div>
+                <button onclick="openPillarModal('duality')" class="mt-6 text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                    MEDITATE ON THIS <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="group bg-white dark:bg-stone-900/60 p-8 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 hover:border-teal-500/50 hover:dark:border-teal-400/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">The Mystery of Emptiness</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                        Thirty spokes share one hub, but it is the central emptiness that drives the wheel. Rooms are carved out, but it is the empty space that makes them livable. Value form, but use void.
+                    </p>
+                </div>
+                <button onclick="openPillarModal('emptiness')" class="mt-6 text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:gap-2 transition-all">
+                    MEDITATE ON THIS <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wu Wei Physics Stream Simulator (Interactive Playground) -->
+    <section id="simulator" class="max-w-6xl mx-auto px-6 py-20 border-t border-stone-200/50 dark:border-stone-800/50">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100/60 dark:bg-teal-950/30 text-teal-800 dark:text-teal-400 text-xs font-semibold">
+                    Interactive Demonstration
+                </div>
+                <h2 class="serif-title text-3xl sm:text-4xl font-semibold text-stone-900 dark:text-white leading-tight">
+                    The Stream of Wu Wei:<br>
+                    Water Always Finds a Way
+                </h2>
+                <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+                    This stream simulates the natural, active flow of life. Tap anywhere on the canvas to place <span class="font-bold text-stone-800 dark:text-stone-100">Obstacles (desires, rigid rules, forced struggles)</span> inside the channel.
+                </p>
+                <div class="p-4 bg-parchment-200/60 dark:bg-stone-900 rounded-xl space-y-2 border border-stone-200/60 dark:border-stone-800 text-xs">
+                    <p class="font-semibold text-stone-800 dark:text-stone-200">The Taoist Lesson:</p>
+                    <p class="text-stone-600 dark:text-stone-400">
+                        Notice how the flowing water particles don't clash head-on or break against your obstacles. Instead, they gracefully slide, curve, and find paths of least resistance.
+                        <strong>The soft overcomes the hard.</strong>
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="clearStreamObstacles()" class="bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 px-4 py-2 rounded-lg text-xs font-semibold tracking-wide hover:opacity-90">
+                        Remove All Obstacles
+                    </button>
+                    <button id="toggle-turbulence-btn" onclick="toggleStreamTurbulence()" class="border border-stone-300 dark:border-stone-700 px-4 py-2 rounded-lg text-xs font-semibold tracking-wide hover:bg-white dark:hover:bg-stone-900 transition-colors">
+                        Introduce Conflict
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <div class="bg-stone-950 border border-stone-800 rounded-3xl p-6 relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-4 left-4 z-10 flex gap-2">
+                        <span id="stream-status" class="px-2.5 py-1 rounded bg-teal-950/80 text-teal-400 border border-teal-800 text-[10px] font-mono tracking-wider uppercase">FLOW MODE: NATURALLY CALM</span>
+                    </div>
+                    <canvas id="flowCanvas" role="img" aria-label="Animated stream of particles flowing around obstacles, demonstrating how water yields and curves around resistance instead of clashing with it. Click the canvas to add obstacles." class="w-full h-[320px] rounded-2xl bg-stone-950 cursor-crosshair border border-stone-900"></canvas>
+                    <div class="mt-4 flex justify-between items-center text-stone-500 text-[10px] font-mono">
+                        <span>Click canvas to place stones of struggle.</span>
+                        <span id="particle-count">Particles: 120</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verses Explorer (The 81 Chapters) -->
+    <section id="verses" class="max-w-6xl mx-auto px-6 py-20 border-t border-stone-200/50 dark:border-stone-800/50">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div class="space-y-4">
+                <h2 class="serif-title text-3xl sm:text-4xl font-semibold text-stone-900 dark:text-white">The Tao Te Ching Library</h2>
+                <p class="text-stone-600 dark:text-stone-400 max-w-xl">
+                    All 81 chapters, in classical Chinese alongside a modern English rendering. Search or filter by core Taoist categories below.
+                </p>
+                <div class="flex items-center gap-3 pt-1">
+                    <div class="flex-1 max-w-xs h-1.5 rounded-full bg-stone-200 dark:bg-stone-800 overflow-hidden">
+                        <div id="progress-bar" class="h-full bg-teal-600 dark:bg-teal-400 transition-all duration-500" style="width: 0%"></div>
+                    </div>
+                    <span id="progress-label" class="text-xs text-stone-500 dark:text-stone-400 font-mono whitespace-nowrap">0 / 81 explored</span>
+                    <button onclick="openMandalaModal()" aria-label="View your reading journey mandala" class="text-xs text-teal-700 dark:text-teal-400 font-semibold flex items-center gap-1 hover:text-teal-900 dark:hover:text-teal-300 transition-colors whitespace-nowrap">
+                        <i data-lucide="flower-2" class="w-3.5 h-3.5"></i> View My Journey
+                    </button>
+                </div>
+            </div>
+            <div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                <!-- Search -->
+                <div class="relative min-w-[240px]">
+                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400"></i>
+                    <input type="text" id="chapter-search" oninput="filterChapters()" aria-label="Search verses or topics" placeholder="Search verses or topics..." class="w-full bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 pl-10 pr-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-teal-500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Theme Filters -->
+        <div class="flex flex-wrap gap-2 mb-8">
+            <button onclick="filterByTheme('all')" id="filter-all" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-950">
+                All Verses
+            </button>
+            <button onclick="filterByTheme('nature')" id="filter-nature" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-teal-500">
+                Nature of the Tao
+            </button>
+            <button onclick="filterByTheme('wuwei')" id="filter-wuwei" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-teal-500">
+                Wu Wei (Effortless Action)
+            </button>
+            <button onclick="filterByTheme('treasures')" id="filter-treasures" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-teal-500">
+                The Three Treasures
+            </button>
+            <button onclick="filterByTheme('water')" id="filter-water" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-teal-500">
+                Softness & Yielding
+            </button>
+            <button onclick="filterByTheme('duality')" id="filter-duality" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-teal-500">
+                Complementary Duality
+            </button>
+            <button onclick="filterByTheme('emptiness')" id="filter-emptiness" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-teal-500">
+                Emptiness
+            </button>
+            <button onclick="toggleFavoritesFilter()" id="filter-favorites" class="px-4 py-2 rounded-full text-xs font-medium transition-colors border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900 text-stone-600 dark:text-stone-400 hover:border-amber-500 flex items-center gap-1.5">
+                <i data-lucide="bookmark" class="w-3 h-3"></i> Saved
+            </button>
+        </div>
+
+        <!-- Verses Output Grid -->
+        <div id="verses-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Dynamically populated -->
+        </div>
+    </section>
+
+    <!-- Interactive Sanctuary Breathing Coach -->
+    <section id="meditation" class="max-w-4xl mx-auto px-6 py-20 border-t border-stone-200/50 dark:border-stone-800/50 text-center">
+        <div class="space-y-4 max-w-xl mx-auto mb-12">
+            <h2 class="serif-title text-3xl sm:text-4xl font-semibold text-stone-900 dark:text-white">Tranquility Breathing Chamber</h2>
+            <p class="text-stone-600 dark:text-stone-400 text-sm">
+                "Attain the ultimate emptiness. Hold on to the truest tranquility." — Chapter 16. Match your breathing to the expanding circle to ground yourself.
+            </p>
+        </div>
+
+        <div class="bg-white/60 dark:bg-stone-900/60 p-12 rounded-3xl border border-stone-200/50 dark:border-stone-800/50 relative overflow-hidden max-w-2xl mx-auto flex flex-col items-center justify-center space-y-8 ink-glow">
+
+            <!-- Breathing Indicator -->
+            <div class="relative w-48 h-48 flex items-center justify-center">
+                <!-- Inner pulse circle -->
+                <div id="breath-indicator" class="absolute w-24 h-24 rounded-full bg-teal-100 dark:bg-teal-950/60 border border-teal-300 dark:border-teal-800 transition-all duration-[4000ms] ease-in-out scale-100"></div>
+                <!-- Content -->
+                <div class="z-10 text-center space-y-1">
+                    <span id="breath-word" class="serif-title text-xl font-medium tracking-wide block transition-all duration-1000">Prepare</span>
+                    <span id="breath-timer" class="text-[10px] font-mono text-stone-400 tracking-wider">0s</span>
+                </div>
+            </div>
+
+            <!-- Control Box -->
+            <div class="space-y-4 w-full max-w-xs">
+                <button id="breath-btn" onclick="toggleBreathingCycle()" class="w-full bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-stone-200 text-white dark:text-stone-950 px-6 py-3 rounded-xl font-semibold text-sm transition-all">
+                    Begin Flow Breathing
+                </button>
+                <p id="breath-tip" class="text-xs text-stone-500 italic">"The valley spirit, undying, is called the Mystic Female."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-100 dark:bg-obsidian-900 border-t border-stone-200/50 dark:border-stone-800/50 py-12 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">
+            <div class="flex items-center gap-3">
+                <span class="serif-title font-semibold text-stone-900 dark:text-white">道德經 Sanctuary</span>
+                <span class="text-stone-400">|</span>
+                <span class="text-stone-500 text-xs">Classical text: Wang Bi edition (public domain). English renderings adapted from James Legge's 1891 translation.</span>
+            </div>
+            <div class="flex items-center gap-6 text-stone-500">
+                <a href="#philosophy" class="hover:text-stone-800 dark:hover:text-stone-200">Pillars</a>
+                <a href="#simulator" class="hover:text-stone-800 dark:hover:text-stone-200">Stream</a>
+                <a href="#verses" class="hover:text-stone-800 dark:hover:text-stone-200">Verses</a>
+                <a href="#meditation" class="hover:text-stone-800 dark:hover:text-stone-200">Breathe</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Pillar Modal -->
+    <div id="pillar-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-stone-900 max-w-lg w-full rounded-3xl p-8 border border-stone-200 dark:border-stone-800 shadow-2xl relative space-y-6 transform scale-95 transition-transform duration-300">
+            <button onclick="closePillarModal()" aria-label="Close dialog" class="absolute top-6 right-6 p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div class="flex items-center gap-4">
+                <div id="modal-icon-container" class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/50 flex items-center justify-center text-teal-700 dark:text-teal-400">
+                    <!-- Icon injects here -->
+                </div>
+                <div>
+                    <h3 id="modal-title" class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">Pillar</h3>
+                    <p id="modal-subtitle" class="text-xs tracking-wider uppercase text-teal-700 dark:text-teal-400 font-semibold">Sub</p>
+                </div>
+            </div>
+            <p id="modal-desc" class="text-stone-600 dark:text-stone-300 leading-relaxed text-sm">Description</p>
+
+            <div class="p-4 bg-stone-50 dark:bg-stone-950 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 space-y-2">
+                <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Modern Living Application</p>
+                <p id="modal-application" class="text-stone-700 dark:text-stone-300 text-sm italic">Application exercise</p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-100 dark:border-stone-800 flex justify-end">
+                <button onclick="closePillarModal()" class="bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-stone-200 text-white dark:text-stone-950 text-xs font-semibold px-5 py-2.5 rounded-xl transition-all">
+                    Return to Silence
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Journey Mandala Modal -->
+    <div id="mandala-modal" role="dialog" aria-modal="true" aria-labelledby="mandala-modal-title" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-stone-900 max-w-md w-full rounded-3xl p-8 border border-stone-200 dark:border-stone-800 shadow-2xl relative space-y-6 transform scale-95 transition-transform duration-300">
+            <button onclick="closeMandalaModal()" aria-label="Close dialog" class="absolute top-6 right-6 p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div>
+                <h3 id="mandala-modal-title" class="serif-title text-2xl font-semibold text-stone-900 dark:text-white">Your Reading Journey</h3>
+                <p id="mandala-modal-subtitle" class="text-xs tracking-wider uppercase text-teal-700 dark:text-teal-400 font-semibold">0 of 81 chapters illuminated</p>
+            </div>
+            <div id="mandala-container" class="flex items-center justify-center py-2"></div>
+            <p class="text-xs text-stone-500 dark:text-stone-400 text-center italic">Each point is a chapter. Tap a lit point to revisit it.</p>
+        </div>
+    </div>
+
+    <!-- Chapter Article Modal -->
+    <div id="article-modal" role="dialog" aria-modal="true" aria-labelledby="article-modal-title" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-stone-900 max-w-2xl w-full max-h-[85vh] rounded-3xl border border-stone-200 dark:border-stone-800 shadow-2xl relative flex flex-col transform scale-95 transition-transform duration-300">
+            <button onclick="closeArticleModal()" aria-label="Close dialog" class="absolute top-6 right-6 p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors z-10">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div class="p-8 pb-4 shrink-0 border-b border-stone-100 dark:border-stone-800 pr-16">
+                <span id="article-modal-number" class="text-xs uppercase tracking-widest text-teal-700 dark:text-teal-400 font-semibold">Chapter 1</span>
+                <h3 id="article-modal-title" class="serif-title text-2xl md:text-3xl font-semibold text-stone-900 dark:text-white mt-1">Title</h3>
+            </div>
+            <div class="article-modal-scroll p-8 pt-6 overflow-y-auto space-y-6">
+                <div id="article-modal-chinese" class="chinese-text text-sm text-stone-500 dark:text-stone-400 leading-loose font-light border-l-2 border-teal-500/30 pl-4" lang="zh-Hant"></div>
+                <div id="article-modal-translation" class="whitespace-pre-line text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-light italic border-l-2 border-stone-200 dark:border-stone-700 pl-4"></div>
+                <div id="article-modal-podcast" class="hidden p-4 bg-teal-50/60 dark:bg-teal-950/30 rounded-2xl border border-teal-200/50 dark:border-teal-900/40"></div>
+                <div id="article-modal-explainer" class="hidden p-4 bg-violet-50/60 dark:bg-violet-950/30 rounded-2xl border border-violet-200/50 dark:border-violet-900/40"></div>
+                <div class="pt-2 space-y-3">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Full Reflection</p>
+                    <div id="article-modal-body" class="text-stone-700 dark:text-stone-300 text-sm leading-relaxed space-y-4"></div>
+                </div>
+            </div>
+            <div class="p-6 border-t border-stone-100 dark:border-stone-800 flex justify-end shrink-0">
+                <button onclick="closeArticleModal()" class="bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-stone-200 text-white dark:text-stone-950 text-xs font-semibold px-5 py-2.5 rounded-xl transition-all">
+                    Return to Silence
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- App logic: state, rendering, physics stream & breathing coach -->
+    <script src="js/app.js" defer></script>
+</body>
+</html>

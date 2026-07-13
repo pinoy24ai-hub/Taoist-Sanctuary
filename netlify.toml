@@ -1,0 +1,39 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # media-src is required for the chapter podcasts/video explainers, which are
+    # hosted on Cloudflare R2 rather than this Netlify site (see js/app.js's
+    # R2_MEDIA_BASE_URL constant). Update the domain below if you change it there.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self' https://pub-67ec229a129543a2968c7362a1737135.r2.dev; connect-src 'self'; base-uri 'self'; form-action 'self'"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# css/js filenames are NOT content-hashed, so they must revalidate on every
+# request rather than being cached as immutable -- otherwise browsers and the
+# CDN can keep serving a stale app.js/style.css indefinitely after an update.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Images aren't versioned by filename either; keep them short-lived too.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# The HTML entry point should always be revalidated so content updates show up immediately
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

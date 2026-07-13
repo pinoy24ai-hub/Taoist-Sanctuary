@@ -1,0 +1,16 @@
+# Large local media staging - never committed, synced to R2 separately (see scripts/README.md)
+r2-podcasts/
+r2-explainers/
+
+# Netlify CLI local state
+.netlify/
+
+# Python
+scripts/__pycache__/
+
+# Stray nested repo from an earlier GitHub Desktop init - not part of the site
+Taoism/
+
+# OS
+.DS_Store
+Thumbs.db

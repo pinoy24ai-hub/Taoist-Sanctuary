@@ -1,0 +1,167 @@
+{
+  "generatedNote": "Auto-generated from filenames in r2-podcasts/ and r2-explainers/. Re-run the generator script whenever new chapter media is added to either folder.",
+  "podcasts": {
+    "10": {
+      "chapter": 10,
+      "title": "High Performance Through Unclenched Effort",
+      "localFile": "Ch_10_High_Performance_Through_Unclenched_Effort.m4a",
+      "r2Key": "podcasts/ch-10.m4a",
+      "sizeBytes": 29365575,
+      "durationSeconds": 912
+    },
+    "1": {
+      "chapter": 1,
+      "title": "Escape the cage of modern labels",
+      "localFile": "Ch_1_Escape_the_cage_of_modern_labels.m4a",
+      "r2Key": "podcasts/ch-01.m4a",
+      "sizeBytes": 38440112,
+      "durationSeconds": 1194
+    },
+    "2": {
+      "chapter": 2,
+      "title": "Why Defining Success Guarantees Failure",
+      "localFile": "Ch_2_Why_Defining_Success_Guarantees_Failure.m4a",
+      "r2Key": "podcasts/ch-02.m4a",
+      "sizeBytes": 35509930,
+      "durationSeconds": 1103
+    },
+    "3": {
+      "chapter": 3,
+      "title": "Escaping the digital casino with Laozi",
+      "localFile": "Ch_3_Escaping_the_digital_casino_with_Laozi.m4a",
+      "r2Key": "podcasts/ch-03.m4a",
+      "sizeBytes": 38006714,
+      "durationSeconds": 1181
+    },
+    "4": {
+      "chapter": 4,
+      "title": "Beating burnout with the empty vessel",
+      "localFile": "Ch_4_Beating_burnout_with_the_empty_vessel.m4a",
+      "r2Key": "podcasts/ch-04.m4a",
+      "sizeBytes": 41783639,
+      "durationSeconds": 1298
+    },
+    "5": {
+      "chapter": 5,
+      "title": "Stop Taking the Universe Personally",
+      "localFile": "Ch_5_Stop_Taking_the_Universe_Personally.m4a",
+      "r2Key": "podcasts/ch-05.m4a",
+      "sizeBytes": 37955168,
+      "durationSeconds": 1179
+    },
+    "6": {
+      "chapter": 6,
+      "title": "Why Valleys Outlast Mountains",
+      "localFile": "Ch_6_Why_Valleys_Outlast_Mountains.m4a",
+      "r2Key": "podcasts/ch-06.m4a",
+      "sizeBytes": 33765762,
+      "durationSeconds": 1049
+    },
+    "7": {
+      "chapter": 7,
+      "title": "Why the Sage Finishes First",
+      "localFile": "Ch_7_Why_the_Sage_Finishes_First.m4a",
+      "r2Key": "podcasts/ch-07.m4a",
+      "sizeBytes": 38953560,
+      "durationSeconds": 1210
+    },
+    "8": {
+      "chapter": 8,
+      "title": "Unstoppable Strength Through the Way of Water",
+      "localFile": "Ch_8_Unstoppable_Strength_Through_the_Way_of_Water.m4a",
+      "r2Key": "podcasts/ch-08.m4a",
+      "sizeBytes": 33599804,
+      "durationSeconds": 1044
+    },
+    "9": {
+      "chapter": 9,
+      "title": "The danger of an unbroken ascent",
+      "localFile": "Ch_9_The_danger_of_an_unbroken_ascent.m4a",
+      "r2Key": "podcasts/ch-09.m4a",
+      "sizeBytes": 33072162,
+      "durationSeconds": 1028
+    }
+  },
+  "explainers": {
+    "10": {
+      "chapter": 10,
+      "title": "Discipline of Letting Be",
+      "localFile": "Ch_10_Discipline_of_Letting_Be.mp4",
+      "r2Key": "explainers/ch-10.mp4",
+      "sizeBytes": 39656003,
+      "durationSeconds": 388
+    },
+    "1": {
+      "chapter": 1,
+      "title": "Mystery Beyond Naming",
+      "localFile": "Ch_1_Mystery_Beyond_Naming.mp4",
+      "r2Key": "explainers/ch-01.mp4",
+      "sizeBytes": 33479924,
+      "durationSeconds": 385
+    },
+    "2": {
+      "chapter": 2,
+      "title": "Paradox of Opposites",
+      "localFile": "Ch_2_Paradox_of_Opposites.mp4",
+      "r2Key": "explainers/ch-02.mp4",
+      "sizeBytes": 29701811,
+      "durationSeconds": 362
+    },
+    "3": {
+      "chapter": 3,
+      "title": "The Ancient Mirror",
+      "localFile": "Ch_3_The_Ancient_Mirror.mp4",
+      "r2Key": "explainers/ch-03.mp4",
+      "sizeBytes": 48386643,
+      "durationSeconds": 377
+    },
+    "4": {
+      "chapter": 4,
+      "title": "The Bottomless Vessel",
+      "localFile": "Ch_4_The_Bottomless_Vessel.mp4",
+      "r2Key": "explainers/ch-04.mp4",
+      "sizeBytes": 36287151,
+      "durationSeconds": 387
+    },
+    "5": {
+      "chapter": 5,
+      "title": "Heaven's Impartial Bellows",
+      "localFile": "Ch_5_Heaven_s_Impartial_Bellows.mp4",
+      "r2Key": "explainers/ch-05.mp4",
+      "sizeBytes": 51554113,
+      "durationSeconds": 499
+    },
+    "6": {
+      "chapter": 6,
+      "title": "The Valley That Never Dies",
+      "localFile": "Ch_6_The_Valley_That_Never_Dies.mp4",
+      "r2Key": "explainers/ch-06.mp4",
+      "sizeBytes": 39343235,
+      "durationSeconds": 409
+    },
+    "7": {
+      "chapter": 7,
+      "title": "Enduring by Letting Go",
+      "localFile": "Ch_7_Enduring_by_Letting_Go.mp4",
+      "r2Key": "explainers/ch-07.mp4",
+      "sizeBytes": 41998800,
+      "durationSeconds": 447
+    },
+    "8": {
+      "chapter": 8,
+      "title": "The Way of Water",
+      "localFile": "Ch_8_The_Way_of_Water.mp4",
+      "r2Key": "explainers/ch-08.mp4",
+      "sizeBytes": 36824168,
+      "durationSeconds": 365
+    },
+    "9": {
+      "chapter": 9,
+      "title": "Unpacking Knowing Where to Stop",
+      "localFile": "Ch_9_Unpacking_Knowing_Where_to_Stop.mp4",
+      "r2Key": "explainers/ch-09.mp4",
+      "sizeBytes": 36074583,
+      "durationSeconds": 403
+    }
+  }
+}
