@@ -1103,10 +1103,12 @@ const chaptersData = [
                 console.warn('Icon rendering skipped:', e);
             }
             renderChapters();
+            renderMediaLibrary();
             updateProgress();
             initFlowStream();
             initBreathingCoach();
             drawOracleCard();
+            openChapterFromUrlHash();
         };
 
         // In case lucide finishes loading after our own script has already run
@@ -1123,6 +1125,12 @@ const chaptersData = [
         let currentThemeFilter = 'all';
         let showFavoritesOnly = false;
         const visibleChineseChapters = new Set();
+
+        // The 81-chapter library renders incrementally rather than all at once,
+        // to keep the initial page weight down. "Load More" extends this by one
+        // page; changing the search/filter resets back to the first page.
+        const CHAPTER_PAGE_SIZE = 12;
+        let visibleChapterCount = CHAPTER_PAGE_SIZE;
 
         // Toggle Dark (Yin) / Light (Yang) Mode
         function toggleTheme() {
@@ -1144,8 +1152,14 @@ const chaptersData = [
 
         function toggleFavoritesFilter() {
             showFavoritesOnly = !showFavoritesOnly;
+            visibleChapterCount = CHAPTER_PAGE_SIZE;
             const btn = document.getElementById('filter-favorites');
             if (btn) btn.classList.toggle('zh-toggle-active', showFavoritesOnly);
+            renderChapters();
+        }
+
+        function loadMoreChapters() {
+            visibleChapterCount += CHAPTER_PAGE_SIZE;
             renderChapters();
         }
 
@@ -1180,7 +1194,9 @@ const chaptersData = [
                 return;
             }
 
-            filtered.forEach(ch => {
+            const toRender = filtered.slice(0, visibleChapterCount);
+
+            toRender.forEach(ch => {
                 const card = document.createElement('div');
                 card.className = "bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 hover:shadow-md transition-all duration-300 relative group";
                 card.id = `chapter-${ch.number}`;
@@ -1218,8 +1234,8 @@ const chaptersData = [
                             <button onclick="openArticleModal(${ch.number})" class="text-[10px] text-amber-600 dark:text-amber-400 font-semibold tracking-wider flex items-center gap-1 hover:text-amber-800 dark:hover:text-amber-300 self-start">
                                 <i data-lucide="book-open" class="w-3.5 h-3.5"></i> READ ARTICLE
                             </button>
-                            ${ch.podcast ? `<button onclick="openArticleModal(${ch.number})" class="text-[10px] text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:text-teal-900 dark:hover:text-teal-300 self-start"><i data-lucide="headphones" class="w-3.5 h-3.5"></i> LISTEN</button>` : ''}
-                            ${ch.explainer ? `<button onclick="openArticleModal(${ch.number})" class="text-[10px] text-violet-700 dark:text-violet-400 font-semibold tracking-wider flex items-center gap-1 hover:text-violet-900 dark:hover:text-violet-300 self-start"><i data-lucide="clapperboard" class="w-3.5 h-3.5"></i> WATCH</button>` : ''}
+                            ${ch.podcast ? `<button onclick="openArticleModal(${ch.number}, 'podcast')" class="text-[10px] text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:text-teal-900 dark:hover:text-teal-300 self-start"><i data-lucide="headphones" class="w-3.5 h-3.5"></i> LISTEN</button>` : ''}
+                            ${ch.explainer ? `<button onclick="openArticleModal(${ch.number}, 'explainer')" class="text-[10px] text-violet-700 dark:text-violet-400 font-semibold tracking-wider flex items-center gap-1 hover:text-violet-900 dark:hover:text-violet-300 self-start"><i data-lucide="clapperboard" class="w-3.5 h-3.5"></i> WATCH</button>` : ''}
                             <button onclick="shareContemplation('${ch.title.replace(/'/g, "\\'")}', '${ch.keyTakeaway.replace(/'/g, "\\'")}', ${ch.number})" class="text-[10px] text-teal-600 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1 hover:text-teal-800 self-start">
                                 <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPY WISDOM
                             </button>
@@ -1231,16 +1247,69 @@ const chaptersData = [
                 `;
                 container.appendChild(card);
             });
+
+            if (filtered.length > toRender.length) {
+                const loadMoreWrap = document.createElement('div');
+                loadMoreWrap.className = "col-span-full flex flex-col items-center gap-2 pt-2";
+                loadMoreWrap.innerHTML = `
+                    <button onclick="loadMoreChapters()" class="border border-stone-300 dark:border-stone-700 hover:bg-white dark:hover:bg-stone-900 px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300">
+                        Load More Verses
+                    </button>
+                    <span class="text-xs text-stone-400 font-mono">${toRender.length} of ${filtered.length} shown</span>
+                `;
+                container.appendChild(loadMoreWrap);
+            }
+
+            safeCreateIcons();
+        }
+
+        // Renders the "Listen & Watch" homepage section from whichever chapters
+        // currently have a podcast and/or explainer video. Purely data-driven so
+        // it stays current as more chapter media gets added via the R2 pipeline.
+        function renderMediaLibrary() {
+            const container = document.getElementById('media-library-container');
+            const countEl = document.getElementById('media-library-count');
+            if (!container) return;
+
+            const withMedia = chaptersData
+                .filter(ch => ch.podcast || ch.explainer)
+                .sort((a, b) => a.number - b.number);
+
+            if (countEl) countEl.textContent = `${withMedia.length} of ${chaptersData.length} chapters`;
+
+            if (withMedia.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 border border-dashed border-stone-200 dark:border-stone-800 rounded-3xl">
+                        <p class="text-stone-500 text-sm">Podcasts and video essays are coming soon.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = withMedia.map(ch => `
+                <div class="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 flex flex-col justify-between gap-4 hover:shadow-md transition-all duration-300">
+                    <div class="space-y-1">
+                        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Chapter ${ch.number}</span>
+                        <h4 class="serif-title text-lg font-semibold text-stone-900 dark:text-white">${escapeHtml(ch.title)}</h4>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-4">
+                        ${ch.podcast ? `<button onclick="openArticleModal(${ch.number}, 'podcast')" class="text-xs text-teal-700 dark:text-teal-400 font-semibold tracking-wider flex items-center gap-1.5 hover:text-teal-900 dark:hover:text-teal-300"><i data-lucide="headphones" class="w-4 h-4"></i> LISTEN</button>` : ''}
+                        ${ch.explainer ? `<button onclick="openArticleModal(${ch.number}, 'explainer')" class="text-xs text-violet-700 dark:text-violet-400 font-semibold tracking-wider flex items-center gap-1.5 hover:text-violet-900 dark:hover:text-violet-300"><i data-lucide="clapperboard" class="w-4 h-4"></i> WATCH</button>` : ''}
+                    </div>
+                </div>
+            `).join('');
             safeCreateIcons();
         }
 
         function filterChapters() {
+            visibleChapterCount = CHAPTER_PAGE_SIZE;
             renderChapters();
         }
 
         function filterByTheme(theme) {
             currentThemeFilter = theme;
             showFavoritesOnly = false;
+            visibleChapterCount = CHAPTER_PAGE_SIZE;
 
             // Reset active filters class
             const filters = ['all', 'nature', 'wuwei', 'treasures', 'water', 'duality', 'emptiness'];
@@ -1342,12 +1411,53 @@ const chaptersData = [
         // CHAPTER ARTICLE MODAL (full essay per chapter)
         // ==========================================
         let lastArticleFocusedElement = null;
+        let currentArticleChapter = null;
 
-        function openArticleModal(num) {
+        // Reads a #chapter-N hash (used both on first page load and by the
+        // in-modal "copy link" button) so a specific chapter can be linked to
+        // directly instead of only reachable by scrolling the full library.
+        function getChapterNumFromHash() {
+            const match = location.hash.match(/^#chapter-(\d+)$/);
+            return match ? parseInt(match[1], 10) : null;
+        }
+
+        // Opens the article modal directly if the page was loaded with a
+        // #chapter-N link (e.g. shared from the "copy link" button below).
+        function openChapterFromUrlHash() {
+            const num = getChapterNumFromHash();
+            if (num !== null && chaptersData.some(c => c.number === num)) {
+                openArticleModal(num);
+            }
+        }
+
+        function copyArticleModalLink() {
+            if (!currentArticleChapter) return;
+            const url = location.origin + location.pathname + location.search + '#chapter-' + currentArticleChapter;
+            const fallbackCopy = () => {
+                const tempInput = document.createElement('textarea');
+                tempInput.value = url;
+                tempInput.style.position = 'fixed';
+                tempInput.style.opacity = '0';
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                try { document.execCommand('copy'); } catch (e) { /* clipboard unavailable */ }
+                document.body.removeChild(tempInput);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).catch(fallbackCopy);
+            } else {
+                fallbackCopy();
+            }
+            showToast('Link to this chapter copied.');
+        }
+
+        function openArticleModal(num, focusSection) {
             const ch = chaptersData.find(c => c.number === num);
             if (!ch) return;
 
             lastArticleFocusedElement = document.activeElement;
+            currentArticleChapter = num;
+            history.replaceState(null, '', location.pathname + location.search + '#chapter-' + num);
 
             document.getElementById('article-modal-number').innerText = `Chapter ${ch.number}`;
             document.getElementById('article-modal-title').innerText = ch.title;
@@ -1397,7 +1507,16 @@ const chaptersData = [
             setTimeout(() => {
                 modal.children[0].classList.remove('scale-95');
                 modal.children[0].classList.add('scale-100');
-                modal.querySelector('.article-modal-scroll').scrollTop = 0;
+                const scrollContainer = modal.querySelector('.article-modal-scroll');
+                const focusTargetId = focusSection === 'podcast' ? 'article-modal-podcast'
+                    : focusSection === 'explainer' ? 'article-modal-explainer'
+                    : null;
+                const focusTarget = focusTargetId ? document.getElementById(focusTargetId) : null;
+                if (focusTarget && !focusTarget.classList.contains('hidden')) {
+                    scrollContainer.scrollTop = focusTarget.offsetTop - 16;
+                } else {
+                    scrollContainer.scrollTop = 0;
+                }
                 const closeBtn = modal.querySelector('button[aria-label="Close dialog"]');
                 if (closeBtn) closeBtn.focus();
             }, 10);
@@ -1408,6 +1527,10 @@ const chaptersData = [
             modal.children[0].classList.remove('scale-100');
             modal.children[0].classList.add('scale-95');
             document.removeEventListener('keydown', handleArticleModalKeydown);
+            currentArticleChapter = null;
+            if (getChapterNumFromHash() !== null) {
+                history.replaceState(null, '', location.pathname + location.search + '#verses');
+            }
             setTimeout(() => {
                 modal.style.display = 'none';
                 if (lastArticleFocusedElement && lastArticleFocusedElement.focus) lastArticleFocusedElement.focus();

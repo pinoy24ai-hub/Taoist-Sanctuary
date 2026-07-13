@@ -55,6 +55,7 @@
             </a>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#media-library" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Listen & Watch</a>
                 <a href="#philosophy" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Core Pillars</a>
                 <a href="#simulator" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Wu Wei Stream</a>
                 <a href="#verses" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">81 Chapters</a>
@@ -79,6 +80,7 @@
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200/50 dark:border-stone-800/50 bg-parchment-100 dark:bg-obsidian-950">
             <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+                <a href="#media-library" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Listen & Watch</a>
                 <a href="#philosophy" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Core Pillars</a>
                 <a href="#simulator" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Wu Wei Stream</a>
                 <a href="#verses" onclick="toggleMobileMenu()" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">81 Chapters</a>
@@ -142,6 +144,25 @@
             </div>
         </div>
     </header>
+
+    <!-- Listen & Watch (Chapter Podcasts + Video Explainers) -->
+    <section id="media-library" class="max-w-6xl mx-auto px-6 py-20 border-t border-stone-200/50 dark:border-stone-800/50">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div class="space-y-4 max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 dark:bg-violet-950/30 border border-violet-200/50 dark:border-violet-900/50 text-violet-800 dark:text-violet-300 text-xs font-semibold">
+                    New
+                </div>
+                <h2 class="serif-title text-3xl sm:text-4xl font-semibold text-stone-900 dark:text-white">Listen & Watch</h2>
+                <p class="text-stone-600 dark:text-stone-400">
+                    Selected chapters, narrated as podcast episodes and unpacked as short video essays. More chapters are added over time.
+                </p>
+            </div>
+            <span id="media-library-count" class="text-xs text-stone-500 dark:text-stone-400 font-mono whitespace-nowrap">0 of 81 chapters</span>
+        </div>
+        <div id="media-library-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamically populated -->
+        </div>
+    </section>
 
     <!-- Core Pillars Grid -->
     <section id="philosophy" class="max-w-6xl mx-auto px-6 py-20 border-t border-stone-200/50 dark:border-stone-800/50">
@@ -397,6 +418,7 @@
                 <span class="text-stone-500 text-xs">Classical text: Wang Bi edition (public domain). English renderings adapted from James Legge's 1891 translation.</span>
             </div>
             <div class="flex items-center gap-6 text-stone-500">
+                <a href="#media-library" class="hover:text-stone-800 dark:hover:text-stone-200">Listen & Watch</a>
                 <a href="#philosophy" class="hover:text-stone-800 dark:hover:text-stone-200">Pillars</a>
                 <a href="#simulator" class="hover:text-stone-800 dark:hover:text-stone-200">Stream</a>
                 <a href="#verses" class="hover:text-stone-800 dark:hover:text-stone-200">Verses</a>
@@ -453,15 +475,20 @@
     <!-- Chapter Article Modal -->
     <div id="article-modal" role="dialog" aria-modal="true" aria-labelledby="article-modal-title" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white dark:bg-stone-900 max-w-2xl w-full max-h-[85vh] rounded-3xl border border-stone-200 dark:border-stone-800 shadow-2xl relative flex flex-col transform scale-95 transition-transform duration-300">
-            <button onclick="closeArticleModal()" aria-label="Close dialog" class="absolute top-6 right-6 p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors z-10">
-                <i data-lucide="x" class="w-4 h-4"></i>
-            </button>
-            <div class="p-8 pb-4 shrink-0 border-b border-stone-100 dark:border-stone-800 pr-16">
+            <div class="absolute top-6 right-6 flex items-center gap-1 z-10">
+                <button onclick="copyArticleModalLink()" aria-label="Copy link to this chapter" title="Copy link to this chapter" class="p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                    <i data-lucide="link" class="w-4 h-4"></i>
+                </button>
+                <button onclick="closeArticleModal()" aria-label="Close dialog" class="p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div class="p-8 pb-4 shrink-0 border-b border-stone-100 dark:border-stone-800 pr-24">
                 <span id="article-modal-number" class="text-xs uppercase tracking-widest text-teal-700 dark:text-teal-400 font-semibold">Chapter 1</span>
                 <h3 id="article-modal-title" class="serif-title text-2xl md:text-3xl font-semibold text-stone-900 dark:text-white mt-1">Title</h3>
             </div>
             <div class="article-modal-scroll p-8 pt-6 overflow-y-auto space-y-6">
-                <div id="article-modal-chinese" class="chinese-text text-sm text-stone-500 dark:text-stone-400 leading-loose font-light border-l-2 border-teal-500/30 pl-4" lang="zh-Hant"></div>
+                <div id="article-modal-chinese" class="chinese-text text-sm text-stone-500 dark:text-stone-400 leading-loose font-light border-l-2 border-teal-500/30 pl-4" style="writing-mode: horizontal-tb;" lang="zh-Hant"></div>
                 <div id="article-modal-translation" class="whitespace-pre-line text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-light italic border-l-2 border-stone-200 dark:border-stone-700 pl-4"></div>
                 <div id="article-modal-podcast" class="hidden p-4 bg-teal-50/60 dark:bg-teal-950/30 rounded-2xl border border-teal-200/50 dark:border-teal-900/40"></div>
                 <div id="article-modal-explainer" class="hidden p-4 bg-violet-50/60 dark:bg-violet-950/30 rounded-2xl border border-violet-200/50 dark:border-violet-900/40"></div>

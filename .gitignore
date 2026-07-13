@@ -5,6 +5,9 @@ r2-explainers/
 # Netlify CLI local state
 .netlify/
 
+# Wrangler local cache
+.wrangler/
+
 # Python
 scripts/__pycache__/
 
