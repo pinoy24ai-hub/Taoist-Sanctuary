@@ -1471,10 +1471,24 @@ const chaptersData = [
             showToast('Link to this chapter copied.');
         }
 
+        // Pauses whatever audio/video is currently loaded in the article modal.
+        // Needed both when closing the modal and right before swapping in a
+        // different chapter's media -- removing a playing <audio>/<video> from
+        // the DOM via innerHTML doesn't reliably stop playback in every browser.
+        function stopArticleModalMedia() {
+            const modal = document.getElementById('article-modal');
+            modal.querySelectorAll('audio, video').forEach(el => {
+                el.pause();
+                el.removeAttribute('src');
+                el.load();
+            });
+        }
+
         function openArticleModal(num, focusSection) {
             const ch = chaptersData.find(c => c.number === num);
             if (!ch) return;
 
+            stopArticleModalMedia();
             lastArticleFocusedElement = document.activeElement;
             currentArticleChapter = num;
             history.replaceState(null, '', location.pathname + location.search + '#chapter-' + num);
@@ -1513,7 +1527,7 @@ const chaptersData = [
                     <p class="text-xs font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-400 flex items-center gap-1.5">
                         <i data-lucide="clapperboard" class="w-3.5 h-3.5"></i> Watch: ${escapeHtml(ch.explainer.title)}
                     </p>
-                    <video controls preload="none" class="w-full mt-2 rounded-xl aspect-video" src="${mediaUrl(ch.explainer.key)}">
+                    <video controls preload="none" class="rounded-xl mx-auto" style="margin-top: 0.5rem; max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; background: #000; display: block;" src="${mediaUrl(ch.explainer.key)}">
                         Your browser does not support the video element.
                     </video>`;
                 explainerEl.classList.remove('hidden');
@@ -1552,6 +1566,7 @@ const chaptersData = [
 
         function closeArticleModal() {
             const modal = document.getElementById('article-modal');
+            stopArticleModalMedia();
             modal.children[0].classList.remove('scale-100');
             modal.children[0].classList.add('scale-95');
             document.removeEventListener('keydown', handleArticleModalKeydown);
