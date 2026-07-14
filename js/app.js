@@ -1484,8 +1484,16 @@ const chaptersData = [
             document.getElementById('article-modal-chinese').innerHTML = ch.chinese.split('\n').map(l => `<div>${l}</div>`).join('');
             document.getElementById('article-modal-translation').innerText = ch.translation;
 
+            // When opened via a specific LISTEN or WATCH button, show only that
+            // media block -- otherwise, with both a compact audio bar and a much
+            // taller video both in the same scroll container, the video ends up
+            // visible right alongside the audio player regardless of which button
+            // was clicked, making "Listen" look like it opened "Watch" too.
+            const showPodcast = !!ch.podcast && focusSection !== 'explainer';
+            const showExplainer = !!ch.explainer && focusSection !== 'podcast';
+
             const podcastEl = document.getElementById('article-modal-podcast');
-            if (ch.podcast) {
+            if (showPodcast) {
                 podcastEl.innerHTML = `
                     <p class="text-xs font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-400 flex items-center gap-1.5">
                         <i data-lucide="headphones" class="w-3.5 h-3.5"></i> Listen: ${escapeHtml(ch.podcast.title)}
@@ -1500,12 +1508,12 @@ const chaptersData = [
             }
 
             const explainerEl = document.getElementById('article-modal-explainer');
-            if (ch.explainer) {
+            if (showExplainer) {
                 explainerEl.innerHTML = `
                     <p class="text-xs font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-400 flex items-center gap-1.5">
                         <i data-lucide="clapperboard" class="w-3.5 h-3.5"></i> Watch: ${escapeHtml(ch.explainer.title)}
                     </p>
-                    <video controls preload="none" class="w-full mt-2 rounded-xl" src="${mediaUrl(ch.explainer.key)}">
+                    <video controls preload="none" class="w-full mt-2 rounded-xl aspect-video" src="${mediaUrl(ch.explainer.key)}">
                         Your browser does not support the video element.
                     </video>`;
                 explainerEl.classList.remove('hidden');
