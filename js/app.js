@@ -1541,6 +1541,13 @@ const chaptersData = [
             const paragraphs = ch.article.split('\n\n').filter(p => p.trim().length > 0);
             bodyEl.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
 
+            // LISTEN/WATCH are for playing the media, not reading -- keep the
+            // essay out of the way so the player is the only thing on screen.
+            // READ ARTICLE and direct chapter links still show everything.
+            const fullReflectionEl = document.getElementById('article-modal-full-reflection');
+            const isMediaOnly = focusSection === 'podcast' || focusSection === 'explainer';
+            fullReflectionEl.classList.toggle('hidden', isMediaOnly);
+
             markChapterViewed(num);
 
             const modal = document.getElementById('article-modal');
