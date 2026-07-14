@@ -50,6 +50,7 @@ echo "Reading manifest and uploading to R2 bucket \"$R2_BUCKET\" via wrangler...
 
 python3 - "$MANIFEST" "$ROOT_DIR" "$R2_BUCKET" << 'PYEOF'
 import json
+import shutil
 import subprocess
 import sys
 
@@ -57,6 +58,13 @@ manifest_path, root_dir, bucket = sys.argv[1:4]
 
 with open(manifest_path, encoding='utf-8') as f:
     manifest = json.load(f)
+
+# shutil.which resolves the real executable (e.g. wrangler.cmd on Windows) --
+# subprocess.run() without shell=True won't apply PATHEXT resolution itself.
+wrangler_path = shutil.which('wrangler')
+if not wrangler_path:
+    print("ERROR: wrangler not found on PATH.", file=sys.stderr)
+    sys.exit(1)
 
 def content_type(ext):
     return 'audio/x-m4a' if ext == '.m4a' else 'video/mp4'
@@ -68,7 +76,7 @@ def upload(kind, folder, entries):
         ext = '.' + r2_key.rsplit('.', 1)[-1]
         print(f"  [{kind} ch {num}] {entry['localFile']} -> {bucket}/{r2_key}")
         subprocess.run([
-            'wrangler', 'r2', 'object', 'put', f"{bucket}/{r2_key}",
+            wrangler_path, 'r2', 'object', 'put', f"{bucket}/{r2_key}",
             '--file', local_path,
             '--ct', content_type(ext),
             '--remote'

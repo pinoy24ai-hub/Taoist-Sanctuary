@@ -1,5 +1,5 @@
 {
-  "generatedNote": "Auto-generated from filenames in r2-podcasts/ and r2-explainers/. Re-run the generator script whenever new chapter media is added to either folder.",
+  "generatedNote": "Auto-generated from filenames in r2-podcasts/ and r2-explainers/. Re-run this script whenever new chapter media is added to either folder, then re-run the chaptersData merge step.",
   "podcasts": {
     "10": {
       "chapter": 10,
@@ -7,7 +7,79 @@
       "localFile": "Ch_10_High_Performance_Through_Unclenched_Effort.m4a",
       "r2Key": "podcasts/ch-10.m4a",
       "sizeBytes": 29365575,
-      "durationSeconds": 912
+      "durationSeconds": null
+    },
+    "11": {
+      "chapter": 11,
+      "title": "How emptiness does the heavy lifting",
+      "localFile": "Ch_11_How_emptiness_does_the_heavy_lifting.m4a",
+      "r2Key": "podcasts/ch-11.m4a",
+      "sizeBytes": 33302366,
+      "durationSeconds": null
+    },
+    "12": {
+      "chapter": 12,
+      "title": "Ancient Taoism for modern digital burnout",
+      "localFile": "Ch_12_Ancient_Taoism_for_modern_digital_burnout.m4a",
+      "r2Key": "podcasts/ch-12.m4a",
+      "sizeBytes": 24097729,
+      "durationSeconds": null
+    },
+    "13": {
+      "chapter": 13,
+      "title": "Why being someone is so exhausting",
+      "localFile": "Ch_13_Why_being_someone_is_so_exhausting.m4a",
+      "r2Key": "podcasts/ch-13.m4a",
+      "sizeBytes": 36728067,
+      "durationSeconds": null
+    },
+    "14": {
+      "chapter": 14,
+      "title": "The Ancient Power of Effortless Action",
+      "localFile": "Ch_14_The_Ancient_Power_of_Effortless_Action.m4a",
+      "r2Key": "podcasts/ch-14.m4a",
+      "sizeBytes": 36939479,
+      "durationSeconds": null
+    },
+    "15": {
+      "chapter": 15,
+      "title": "Why Masters Let the Muddy Water Settle",
+      "localFile": "Ch_15_Why_Masters_Let_the_Muddy_Water_Settle.m4a",
+      "r2Key": "podcasts/ch-15.m4a",
+      "sizeBytes": 34832134,
+      "durationSeconds": null
+    },
+    "16": {
+      "chapter": 16,
+      "title": "Staying Steady Through Life's Relentless Cycles",
+      "localFile": "Ch_16_Staying_Steady_Through_Life_s_Relentless_Cycles.m4a",
+      "r2Key": "podcasts/ch-16.m4a",
+      "sizeBytes": 37110667,
+      "durationSeconds": null
+    },
+    "17": {
+      "chapter": 17,
+      "title": "Why great leaders stay invisible",
+      "localFile": "Ch_17_Why_great_leaders_stay_invisible.m4a",
+      "r2Key": "podcasts/ch-17.m4a",
+      "sizeBytes": 28289492,
+      "durationSeconds": null
+    },
+    "18": {
+      "chapter": 18,
+      "title": "Strategic strength through yielding like water",
+      "localFile": "Ch_18_Strategic_strength_through_yielding_like_water.m4a",
+      "r2Key": "podcasts/ch-18.m4a",
+      "sizeBytes": 43027059,
+      "durationSeconds": null
+    },
+    "19": {
+      "chapter": 19,
+      "title": "Why Real Virtue Needs No Audience",
+      "localFile": "Ch_19_Why_Real_Virtue_Needs_No_Audience.m4a",
+      "r2Key": "podcasts/ch-19.m4a",
+      "sizeBytes": 38122505,
+      "durationSeconds": null
     },
     "1": {
       "chapter": 1,
@@ -15,7 +87,15 @@
       "localFile": "Ch_1_Escape_the_cage_of_modern_labels.m4a",
       "r2Key": "podcasts/ch-01.m4a",
       "sizeBytes": 38440112,
-      "durationSeconds": 1194
+      "durationSeconds": null
+    },
+    "20": {
+      "chapter": 20,
+      "title": "Why the wisest feel like fools",
+      "localFile": "Ch_20_Why_the_wisest_feel_like_fools.m4a",
+      "r2Key": "podcasts/ch-20.m4a",
+      "sizeBytes": 35297655,
+      "durationSeconds": null
     },
     "2": {
       "chapter": 2,
@@ -23,7 +103,7 @@
       "localFile": "Ch_2_Why_Defining_Success_Guarantees_Failure.m4a",
       "r2Key": "podcasts/ch-02.m4a",
       "sizeBytes": 35509930,
-      "durationSeconds": 1103
+      "durationSeconds": null
     },
     "3": {
       "chapter": 3,
@@ -31,7 +111,7 @@
       "localFile": "Ch_3_Escaping_the_digital_casino_with_Laozi.m4a",
       "r2Key": "podcasts/ch-03.m4a",
       "sizeBytes": 38006714,
-      "durationSeconds": 1181
+      "durationSeconds": null
     },
     "4": {
       "chapter": 4,
@@ -39,7 +119,7 @@
       "localFile": "Ch_4_Beating_burnout_with_the_empty_vessel.m4a",
       "r2Key": "podcasts/ch-04.m4a",
       "sizeBytes": 41783639,
-      "durationSeconds": 1298
+      "durationSeconds": null
     },
     "5": {
       "chapter": 5,
@@ -47,7 +127,7 @@
       "localFile": "Ch_5_Stop_Taking_the_Universe_Personally.m4a",
       "r2Key": "podcasts/ch-05.m4a",
       "sizeBytes": 37955168,
-      "durationSeconds": 1179
+      "durationSeconds": null
     },
     "6": {
       "chapter": 6,
@@ -55,7 +135,7 @@
       "localFile": "Ch_6_Why_Valleys_Outlast_Mountains.m4a",
       "r2Key": "podcasts/ch-06.m4a",
       "sizeBytes": 33765762,
-      "durationSeconds": 1049
+      "durationSeconds": null
     },
     "7": {
       "chapter": 7,
@@ -63,7 +143,7 @@
       "localFile": "Ch_7_Why_the_Sage_Finishes_First.m4a",
       "r2Key": "podcasts/ch-07.m4a",
       "sizeBytes": 38953560,
-      "durationSeconds": 1210
+      "durationSeconds": null
     },
     "8": {
       "chapter": 8,
@@ -71,7 +151,7 @@
       "localFile": "Ch_8_Unstoppable_Strength_Through_the_Way_of_Water.m4a",
       "r2Key": "podcasts/ch-08.m4a",
       "sizeBytes": 33599804,
-      "durationSeconds": 1044
+      "durationSeconds": null
     },
     "9": {
       "chapter": 9,
@@ -79,7 +159,7 @@
       "localFile": "Ch_9_The_danger_of_an_unbroken_ascent.m4a",
       "r2Key": "podcasts/ch-09.m4a",
       "sizeBytes": 33072162,
-      "durationSeconds": 1028
+      "durationSeconds": null
     }
   },
   "explainers": {
@@ -89,7 +169,79 @@
       "localFile": "Ch_10_Discipline_of_Letting_Be.mp4",
       "r2Key": "explainers/ch-10.mp4",
       "sizeBytes": 39656003,
-      "durationSeconds": 388
+      "durationSeconds": null
+    },
+    "11": {
+      "chapter": 11,
+      "title": "The Use of Emptiness",
+      "localFile": "Ch_11_The_Use_of_Emptiness.mp4",
+      "r2Key": "explainers/ch-11.mp4",
+      "sizeBytes": 44453207,
+      "durationSeconds": null
+    },
+    "12": {
+      "chapter": 12,
+      "title": "The Belly Not the Eye",
+      "localFile": "Ch_12_The_Belly_Not_the_Eye.mp4",
+      "r2Key": "explainers/ch-12.mp4",
+      "sizeBytes": 39474724,
+      "durationSeconds": null
+    },
+    "13": {
+      "chapter": 13,
+      "title": "Trouble With Being Someone",
+      "localFile": "Ch_13_Trouble_With_Being_Someone.mp4",
+      "r2Key": "explainers/ch-13.mp4",
+      "sizeBytes": 34646730,
+      "durationSeconds": null
+    },
+    "14": {
+      "chapter": 14,
+      "title": "The Shape of the Shapeless",
+      "localFile": "Ch_14_The_Shape_of_the_Shapeless.mp4",
+      "r2Key": "explainers/ch-14.mp4",
+      "sizeBytes": 37733941,
+      "durationSeconds": null
+    },
+    "15": {
+      "chapter": 15,
+      "title": "Wisdom of Muddy Water",
+      "localFile": "Ch_15_Wisdom_of_Muddy_Water.mp4",
+      "r2Key": "explainers/ch-15.mp4",
+      "sizeBytes": 41008620,
+      "durationSeconds": null
+    },
+    "16": {
+      "chapter": 16,
+      "title": "Return to the Source",
+      "localFile": "Ch_16_Return_to_the_Source.mp4",
+      "r2Key": "explainers/ch-16.mp4",
+      "sizeBytes": 51076054,
+      "durationSeconds": null
+    },
+    "17": {
+      "chapter": 17,
+      "title": "The Leader No One Notices",
+      "localFile": "Ch_17_The_Leader_No_One_Notices.mp4",
+      "r2Key": "explainers/ch-17.mp4",
+      "sizeBytes": 42727067,
+      "durationSeconds": null
+    },
+    "18": {
+      "chapter": 18,
+      "title": "Virtue as a Symptom",
+      "localFile": "Ch_18_Virtue_as_a_Symptom.mp4",
+      "r2Key": "explainers/ch-18.mp4",
+      "sizeBytes": 43076504,
+      "durationSeconds": null
+    },
+    "19": {
+      "chapter": 19,
+      "title": "The Power of Plainness",
+      "localFile": "Ch_19_The_Power_of_Plainness.mp4",
+      "r2Key": "explainers/ch-19.mp4",
+      "sizeBytes": 51821163,
+      "durationSeconds": null
     },
     "1": {
       "chapter": 1,
@@ -97,7 +249,15 @@
       "localFile": "Ch_1_Mystery_Beyond_Naming.mp4",
       "r2Key": "explainers/ch-01.mp4",
       "sizeBytes": 33479924,
-      "durationSeconds": 385
+      "durationSeconds": null
+    },
+    "20": {
+      "chapter": 20,
+      "title": "Alone Among the Crowd",
+      "localFile": "Ch_20_Alone_Among_the_Crowd.mp4",
+      "r2Key": "explainers/ch-20.mp4",
+      "sizeBytes": 47773231,
+      "durationSeconds": null
     },
     "2": {
       "chapter": 2,
@@ -105,7 +265,7 @@
       "localFile": "Ch_2_Paradox_of_Opposites.mp4",
       "r2Key": "explainers/ch-02.mp4",
       "sizeBytes": 29701811,
-      "durationSeconds": 362
+      "durationSeconds": null
     },
     "3": {
       "chapter": 3,
@@ -113,7 +273,7 @@
       "localFile": "Ch_3_The_Ancient_Mirror.mp4",
       "r2Key": "explainers/ch-03.mp4",
       "sizeBytes": 48386643,
-      "durationSeconds": 377
+      "durationSeconds": null
     },
     "4": {
       "chapter": 4,
@@ -121,7 +281,7 @@
       "localFile": "Ch_4_The_Bottomless_Vessel.mp4",
       "r2Key": "explainers/ch-04.mp4",
       "sizeBytes": 36287151,
-      "durationSeconds": 387
+      "durationSeconds": null
     },
     "5": {
       "chapter": 5,
@@ -129,7 +289,7 @@
       "localFile": "Ch_5_Heaven_s_Impartial_Bellows.mp4",
       "r2Key": "explainers/ch-05.mp4",
       "sizeBytes": 51554113,
-      "durationSeconds": 499
+      "durationSeconds": null
     },
     "6": {
       "chapter": 6,
@@ -137,7 +297,7 @@
       "localFile": "Ch_6_The_Valley_That_Never_Dies.mp4",
       "r2Key": "explainers/ch-06.mp4",
       "sizeBytes": 39343235,
-      "durationSeconds": 409
+      "durationSeconds": null
     },
     "7": {
       "chapter": 7,
@@ -145,7 +305,7 @@
       "localFile": "Ch_7_Enduring_by_Letting_Go.mp4",
       "r2Key": "explainers/ch-07.mp4",
       "sizeBytes": 41998800,
-      "durationSeconds": 447
+      "durationSeconds": null
     },
     "8": {
       "chapter": 8,
@@ -153,7 +313,7 @@
       "localFile": "Ch_8_The_Way_of_Water.mp4",
       "r2Key": "explainers/ch-08.mp4",
       "sizeBytes": 36824168,
-      "durationSeconds": 365
+      "durationSeconds": null
     },
     "9": {
       "chapter": 9,
@@ -161,7 +321,7 @@
       "localFile": "Ch_9_Unpacking_Knowing_Where_to_Stop.mp4",
       "r2Key": "explainers/ch-09.mp4",
       "sizeBytes": 36074583,
-      "durationSeconds": 403
+      "durationSeconds": null
     }
   }
 }
