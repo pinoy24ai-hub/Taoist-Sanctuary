@@ -97,12 +97,92 @@
       "sizeBytes": 35297655,
       "durationSeconds": null
     },
+    "21": {
+      "chapter": 21,
+      "title": "Why real substance is always vague",
+      "localFile": "Ch_21_Why_real_substance_is_always_vague.m4a",
+      "r2Key": "podcasts/ch-21.m4a",
+      "sizeBytes": 37396151,
+      "durationSeconds": null
+    },
+    "22": {
+      "chapter": 22,
+      "title": "How bending leads to wholeness",
+      "localFile": "Ch_22_How_bending_leads_to_wholeness.m4a",
+      "r2Key": "podcasts/ch-22.m4a",
+      "sizeBytes": 39111185,
+      "durationSeconds": null
+    },
+    "23": {
+      "chapter": 23,
+      "title": "Why Extremes Are Built to End",
+      "localFile": "Ch_23_Why_Extremes_Are_Built_to_End.m4a",
+      "r2Key": "podcasts/ch-23.m4a",
+      "sizeBytes": 41622910,
+      "durationSeconds": null
+    },
+    "24": {
+      "chapter": 24,
+      "title": "Why social tiptoeing backfires",
+      "localFile": "Ch_24_Why_social_tiptoeing_backfires.m4a",
+      "r2Key": "podcasts/ch-24.m4a",
+      "sizeBytes": 37857190,
+      "durationSeconds": null
+    },
+    "25": {
+      "chapter": 25,
+      "title": "Stop Forcing and Live Like Water",
+      "localFile": "Ch_25_Stop_Forcing_and_Live_Like_Water.m4a",
+      "r2Key": "podcasts/ch-25.m4a",
+      "sizeBytes": 40206807,
+      "durationSeconds": null
+    },
+    "26": {
+      "chapter": 26,
+      "title": "Why True Agility Requires Heavy Roots",
+      "localFile": "Ch_26_Why_True_Agility_Requires_Heavy_Roots.m4a",
+      "r2Key": "podcasts/ch-26.m4a",
+      "sizeBytes": 34511539,
+      "durationSeconds": null
+    },
+    "27": {
+      "chapter": 27,
+      "title": "The Taoist art of leaving no trace",
+      "localFile": "Ch_27_The_Taoist_art_of_leaving_no_trace.m4a",
+      "r2Key": "podcasts/ch-27.m4a",
+      "sizeBytes": 40766455,
+      "durationSeconds": null
+    },
+    "28": {
+      "chapter": 28,
+      "title": "Why Real Strength Chooses Gentleness",
+      "localFile": "Ch_28_Why_Real_Strength_Chooses_Gentleness.m4a",
+      "r2Key": "podcasts/ch-28.m4a",
+      "sizeBytes": 34001079,
+      "durationSeconds": null
+    },
+    "29": {
+      "chapter": 29,
+      "title": "Why a Tight Grip Backfires",
+      "localFile": "Ch_29_Why_a_Tight_Grip_Backfires.m4a",
+      "r2Key": "podcasts/ch-29.m4a",
+      "sizeBytes": 32196401,
+      "durationSeconds": null
+    },
     "2": {
       "chapter": 2,
       "title": "Why Defining Success Guarantees Failure",
       "localFile": "Ch_2_Why_Defining_Success_Guarantees_Failure.m4a",
       "r2Key": "podcasts/ch-02.m4a",
       "sizeBytes": 35509930,
+      "durationSeconds": null
+    },
+    "30": {
+      "chapter": 30,
+      "title": "Why force always returns to its source",
+      "localFile": "Ch_30_Why_force_always_returns_to_its_source.m4a",
+      "r2Key": "podcasts/ch-30.m4a",
+      "sizeBytes": 38776396,
       "durationSeconds": null
     },
     "3": {
@@ -259,12 +339,92 @@
       "sizeBytes": 47773231,
       "durationSeconds": null
     },
+    "21": {
+      "chapter": 21,
+      "title": "Wisdom",
+      "localFile": "Ch_21_Wisdom.mp4",
+      "r2Key": "explainers/ch-21.mp4",
+      "sizeBytes": 42176700,
+      "durationSeconds": null
+    },
+    "22": {
+      "chapter": 22,
+      "title": "Bending Leads to Wholeness",
+      "localFile": "Ch_22_Bending_Leads_to_Wholeness.mp4",
+      "r2Key": "explainers/ch-22.mp4",
+      "sizeBytes": 38083822,
+      "durationSeconds": null
+    },
+    "23": {
+      "chapter": 23,
+      "title": "Why Storms Don t Last",
+      "localFile": "Ch_23_Why_Storms_Don_t_Last.mp4",
+      "r2Key": "explainers/ch-23.mp4",
+      "sizeBytes": 39797826,
+      "durationSeconds": null
+    },
+    "24": {
+      "chapter": 24,
+      "title": "The Cost of Straining",
+      "localFile": "Ch_24_The_Cost_of_Straining.mp4",
+      "r2Key": "explainers/ch-24.mp4",
+      "sizeBytes": 35620184,
+      "durationSeconds": null
+    },
+    "25": {
+      "chapter": 25,
+      "title": "Before Heaven and Earth",
+      "localFile": "Ch_25_Before_Heaven_and_Earth.mp4",
+      "r2Key": "explainers/ch-25.mp4",
+      "sizeBytes": 32336784,
+      "durationSeconds": null
+    },
+    "26": {
+      "chapter": 26,
+      "title": "Root Beneath Restlessness",
+      "localFile": "Ch_26_Root_Beneath_Restlessness.mp4",
+      "r2Key": "explainers/ch-26.mp4",
+      "sizeBytes": 53841879,
+      "durationSeconds": null
+    },
+    "27": {
+      "chapter": 27,
+      "title": "Leaving No Trace",
+      "localFile": "Ch_27_Leaving_No_Trace.mp4",
+      "r2Key": "explainers/ch-27.mp4",
+      "sizeBytes": 40941166,
+      "durationSeconds": null
+    },
+    "28": {
+      "chapter": 28,
+      "title": "Strength in Gentleness",
+      "localFile": "Ch_28_Strength_in_Gentleness.mp4",
+      "r2Key": "explainers/ch-28.mp4",
+      "sizeBytes": 35051763,
+      "durationSeconds": null
+    },
+    "29": {
+      "chapter": 29,
+      "title": "The World Is Not Yours to Grip",
+      "localFile": "Ch_29_The_World_Is_Not_Yours_to_Grip.mp4",
+      "r2Key": "explainers/ch-29.mp4",
+      "sizeBytes": 38963633,
+      "durationSeconds": null
+    },
     "2": {
       "chapter": 2,
       "title": "Paradox of Opposites",
       "localFile": "Ch_2_Paradox_of_Opposites.mp4",
       "r2Key": "explainers/ch-02.mp4",
       "sizeBytes": 29701811,
+      "durationSeconds": null
+    },
+    "30": {
+      "chapter": 30,
+      "title": "Hidden Costs of Winning",
+      "localFile": "Ch_30_Hidden_Costs_of_Winning.mp4",
+      "r2Key": "explainers/ch-30.mp4",
+      "sizeBytes": 31614839,
       "durationSeconds": null
     },
     "3": {
