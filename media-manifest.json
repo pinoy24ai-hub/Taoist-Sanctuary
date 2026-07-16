@@ -273,12 +273,92 @@
       "sizeBytes": 31850406,
       "durationSeconds": null
     },
+    "41": {
+      "chapter": 41,
+      "title": "Why Real Wisdom Sounds Like Foolishness",
+      "localFile": "Ch_41_Why_Real_Wisdom_Sounds_Like_Foolishness.m4a",
+      "r2Key": "podcasts/ch-41.m4a",
+      "sizeBytes": 36134686,
+      "durationSeconds": null
+    },
+    "42": {
+      "chapter": 42,
+      "title": "Why Force Always Destroys Itself",
+      "localFile": "Ch_42_Why_Force_Always_Destroys_Itself.m4a",
+      "r2Key": "podcasts/ch-42.m4a",
+      "sizeBytes": 35900000,
+      "durationSeconds": null
+    },
+    "43": {
+      "chapter": 43,
+      "title": "How Softness Overtakes the Hardest Things",
+      "localFile": "Ch_43_How_Softness_Overtakes_the_Hardest_Things.m4a",
+      "r2Key": "podcasts/ch-43.m4a",
+      "sizeBytes": 20882062,
+      "durationSeconds": null
+    },
+    "44": {
+      "chapter": 44,
+      "title": "The high price of wanting more",
+      "localFile": "Ch_44_The_high_price_of_wanting_more.m4a",
+      "r2Key": "podcasts/ch-44.m4a",
+      "sizeBytes": 35843972,
+      "durationSeconds": null
+    },
+    "45": {
+      "chapter": 45,
+      "title": "Why true mastery often looks flawed",
+      "localFile": "Ch_45_Why_true_mastery_often_looks_flawed.m4a",
+      "r2Key": "podcasts/ch-45.m4a",
+      "sizeBytes": 22663698,
+      "durationSeconds": null
+    },
+    "46": {
+      "chapter": 46,
+      "title": "The Ancient Taoist Wisdom of Enough",
+      "localFile": "Ch_46_The_Ancient_Taoist_Wisdom_of_Enough.m4a",
+      "r2Key": "podcasts/ch-46.m4a",
+      "sizeBytes": 24833162,
+      "durationSeconds": null
+    },
+    "47": {
+      "chapter": 47,
+      "title": "Knowing the world without leaving home",
+      "localFile": "Ch_47_Knowing_the_world_without_leaving_home.m4a",
+      "r2Key": "podcasts/ch-47.m4a",
+      "sizeBytes": 34112504,
+      "durationSeconds": null
+    },
+    "48": {
+      "chapter": 48,
+      "title": "The Taoist Power of Daily Subtraction",
+      "localFile": "Ch_48_The_Taoist_Power_of_Daily_Subtraction.m4a",
+      "r2Key": "podcasts/ch-48.m4a",
+      "sizeBytes": 40319610,
+      "durationSeconds": null
+    },
+    "49": {
+      "chapter": 49,
+      "title": "Why Taoists Trust the Untrustworthy",
+      "localFile": "Ch_49_Why_Taoists_Trust_the_Untrustworthy.m4a",
+      "r2Key": "podcasts/ch-49.m4a",
+      "sizeBytes": 38178533,
+      "durationSeconds": null
+    },
     "4": {
       "chapter": 4,
       "title": "Beating burnout with the empty vessel",
       "localFile": "Ch_4_Beating_burnout_with_the_empty_vessel.m4a",
       "r2Key": "podcasts/ch-04.m4a",
       "sizeBytes": 41783639,
+      "durationSeconds": null
+    },
+    "50": {
+      "chapter": 50,
+      "title": "Why A Death Grip Creates Danger",
+      "localFile": "Ch_50_Why_A_Death_Grip_Creates_Danger.m4a",
+      "r2Key": "podcasts/ch-50.m4a",
+      "sizeBytes": 32153073,
       "durationSeconds": null
     },
     "5": {
@@ -595,12 +675,92 @@
       "sizeBytes": 34832311,
       "durationSeconds": null
     },
+    "41": {
+      "chapter": 41,
+      "title": "Wisdom As Foolishness",
+      "localFile": "Ch_41_Wisdom_As_Foolishness.mp4",
+      "r2Key": "explainers/ch-41.mp4",
+      "sizeBytes": 43181860,
+      "durationSeconds": null
+    },
+    "42": {
+      "chapter": 42,
+      "title": "The Anatomy of Harmony",
+      "localFile": "Ch_42_The_Anatomy_of_Harmony.mp4",
+      "r2Key": "explainers/ch-42.mp4",
+      "sizeBytes": 35399628,
+      "durationSeconds": null
+    },
+    "43": {
+      "chapter": 43,
+      "title": "What Slips Through the Gapless",
+      "localFile": "Ch_43_What_Slips_Through_the_Gapless.mp4",
+      "r2Key": "explainers/ch-43.mp4",
+      "sizeBytes": 44923737,
+      "durationSeconds": null
+    },
+    "44": {
+      "chapter": 44,
+      "title": "The Price of Wanting More",
+      "localFile": "Ch_44_The_Price_of_Wanting_More.mp4",
+      "r2Key": "explainers/ch-44.mp4",
+      "sizeBytes": 40526594,
+      "durationSeconds": null
+    },
+    "45": {
+      "chapter": 45,
+      "title": "Perfection in Disguise",
+      "localFile": "Ch_45_Perfection_in_Disguise.mp4",
+      "r2Key": "explainers/ch-45.mp4",
+      "sizeBytes": 44876203,
+      "durationSeconds": null
+    },
+    "46": {
+      "chapter": 46,
+      "title": "The Only Lasting Enough",
+      "localFile": "Ch_46_The_Only_Lasting_Enough.mp4",
+      "r2Key": "explainers/ch-46.mp4",
+      "sizeBytes": 27669035,
+      "durationSeconds": null
+    },
+    "47": {
+      "chapter": 47,
+      "title": "Knowing Without Wandering",
+      "localFile": "Ch_47_Knowing_Without_Wandering.mp4",
+      "r2Key": "explainers/ch-47.mp4",
+      "sizeBytes": 48672411,
+      "durationSeconds": null
+    },
+    "48": {
+      "chapter": 48,
+      "title": "Pursuing Daily Loss",
+      "localFile": "Ch_48_Pursuing_Daily_Loss.mp4",
+      "r2Key": "explainers/ch-48.mp4",
+      "sizeBytes": 44904536,
+      "durationSeconds": null
+    },
+    "49": {
+      "chapter": 49,
+      "title": "Meeting Without Judgment",
+      "localFile": "Ch_49_Meeting_Without_Judgment.mp4",
+      "r2Key": "explainers/ch-49.mp4",
+      "sizeBytes": 44958783,
+      "durationSeconds": null
+    },
     "4": {
       "chapter": 4,
       "title": "The Bottomless Vessel",
       "localFile": "Ch_4_The_Bottomless_Vessel.mp4",
       "r2Key": "explainers/ch-04.mp4",
       "sizeBytes": 36287151,
+      "durationSeconds": null
+    },
+    "50": {
+      "chapter": 50,
+      "title": "Decoding Chapter 50",
+      "localFile": "Ch_50_Decoding_Chapter_50.mp4",
+      "r2Key": "explainers/ch-50.mp4",
+      "sizeBytes": 43351893,
       "durationSeconds": null
     },
     "5": {
