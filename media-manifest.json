@@ -185,12 +185,92 @@
       "sizeBytes": 38776396,
       "durationSeconds": null
     },
+    "31": {
+      "chapter": 31,
+      "title": "Why Every Victory Deserves a Funeral",
+      "localFile": "Ch_31_Why_Every_Victory_Deserves_a_Funeral.m4a",
+      "r2Key": "podcasts/ch-31.m4a",
+      "sizeBytes": 34800759,
+      "durationSeconds": null
+    },
+    "32": {
+      "chapter": 32,
+      "title": "Restraint is the ultimate power",
+      "localFile": "Ch_32_Restraint_is_the_ultimate_power.m4a",
+      "r2Key": "podcasts/ch-32.m4a",
+      "sizeBytes": 37506713,
+      "durationSeconds": null
+    },
+    "33": {
+      "chapter": 33,
+      "title": "True Power is Overcoming Yourself",
+      "localFile": "Ch_33_True_Power_is_Overcoming_Yourself.m4a",
+      "r2Key": "podcasts/ch-33.m4a",
+      "sizeBytes": 37841502,
+      "durationSeconds": null
+    },
+    "34": {
+      "chapter": 34,
+      "title": "How Silent Success Outlasts the Ego",
+      "localFile": "Ch_34_How_Silent_Success_Outlasts_the_Ego.m4a",
+      "r2Key": "podcasts/ch-34.m4a",
+      "sizeBytes": 36092105,
+      "durationSeconds": null
+    },
+    "35": {
+      "chapter": 35,
+      "title": "Why the most enduring things feel bland",
+      "localFile": "Ch_35_Why_the_most_enduring_things_feel_bland.m4a",
+      "r2Key": "podcasts/ch-35.m4a",
+      "sizeBytes": 31573139,
+      "durationSeconds": null
+    },
+    "36": {
+      "chapter": 36,
+      "title": "Why Softness Outlasts Rigid Force",
+      "localFile": "Ch_36_Why_Softness_Outlasts_Rigid_Force.m4a",
+      "r2Key": "podcasts/ch-36.m4a",
+      "sizeBytes": 39973615,
+      "durationSeconds": null
+    },
+    "37": {
+      "chapter": 37,
+      "title": "How Doing Nothing Gets Everything Done",
+      "localFile": "Ch_37_How_Doing_Nothing_Gets_Everything_Done.m4a",
+      "r2Key": "podcasts/ch-37.m4a",
+      "sizeBytes": 35086990,
+      "durationSeconds": null
+    },
+    "38": {
+      "chapter": 38,
+      "title": "High Virtue Never Tries to Be Good",
+      "localFile": "Ch_38_High_Virtue_Never_Tries_to_Be_Good.m4a",
+      "r2Key": "podcasts/ch-38.m4a",
+      "sizeBytes": 37474591,
+      "durationSeconds": null
+    },
+    "39": {
+      "chapter": 39,
+      "title": "Why stone endures but jade shatters",
+      "localFile": "Ch_39_Why_stone_endures_but_jade_shatters.m4a",
+      "r2Key": "podcasts/ch-39.m4a",
+      "sizeBytes": 34135662,
+      "durationSeconds": null
+    },
     "3": {
       "chapter": 3,
       "title": "Escaping the digital casino with Laozi",
       "localFile": "Ch_3_Escaping_the_digital_casino_with_Laozi.m4a",
       "r2Key": "podcasts/ch-03.m4a",
       "sizeBytes": 38006714,
+      "durationSeconds": null
+    },
+    "40": {
+      "chapter": 40,
+      "title": "Why Moving in Circles Isn t Failure",
+      "localFile": "Ch_40_Why_Moving_in_Circles_Isn_t_Failure.m4a",
+      "r2Key": "podcasts/ch-40.m4a",
+      "sizeBytes": 31850406,
       "durationSeconds": null
     },
     "4": {
@@ -427,12 +507,92 @@
       "sizeBytes": 31614839,
       "durationSeconds": null
     },
+    "31": {
+      "chapter": 31,
+      "title": "Victory Like a Funeral",
+      "localFile": "Ch_31_Victory_Like_a_Funeral.mp4",
+      "r2Key": "explainers/ch-31.mp4",
+      "sizeBytes": 51850712,
+      "durationSeconds": null
+    },
+    "32": {
+      "chapter": 32,
+      "title": "Knowing When to Stop",
+      "localFile": "Ch_32_Knowing_When_to_Stop.mp4",
+      "r2Key": "explainers/ch-32.mp4",
+      "sizeBytes": 41680159,
+      "durationSeconds": null
+    },
+    "33": {
+      "chapter": 33,
+      "title": "Knowing Self is True Power",
+      "localFile": "Ch_33_Knowing_Self_is_True_Power.mp4",
+      "r2Key": "explainers/ch-33.mp4",
+      "sizeBytes": 39775105,
+      "durationSeconds": null
+    },
+    "34": {
+      "chapter": 34,
+      "title": "The Task That Claims Nothing",
+      "localFile": "Ch_34_The_Task_That_Claims_Nothing.mp4",
+      "r2Key": "explainers/ch-34.mp4",
+      "sizeBytes": 34840187,
+      "durationSeconds": null
+    },
+    "35": {
+      "chapter": 35,
+      "title": "Endless in Use",
+      "localFile": "Ch_35_Endless_in_Use.mp4",
+      "r2Key": "explainers/ch-35.mp4",
+      "sizeBytes": 39588112,
+      "durationSeconds": null
+    },
+    "36": {
+      "chapter": 36,
+      "title": "The Logic of Reversal",
+      "localFile": "Ch_36_The_Logic_of_Reversal.mp4",
+      "r2Key": "explainers/ch-36.mp4",
+      "sizeBytes": 32922978,
+      "durationSeconds": null
+    },
+    "37": {
+      "chapter": 37,
+      "title": "Unpacking",
+      "localFile": "Ch_37_Unpacking.mp4",
+      "r2Key": "explainers/ch-37.mp4",
+      "sizeBytes": 43562416,
+      "durationSeconds": null
+    },
+    "38": {
+      "chapter": 38,
+      "title": "Virtue That Doesn t Try",
+      "localFile": "Ch_38_Virtue_That_Doesn_t_Try.mp4",
+      "r2Key": "explainers/ch-38.mp4",
+      "sizeBytes": 40577748,
+      "durationSeconds": null
+    },
+    "39": {
+      "chapter": 39,
+      "title": "True Stability",
+      "localFile": "Ch_39_True_Stability.mp4",
+      "r2Key": "explainers/ch-39.mp4",
+      "sizeBytes": 38840060,
+      "durationSeconds": null
+    },
     "3": {
       "chapter": 3,
       "title": "The Ancient Mirror",
       "localFile": "Ch_3_The_Ancient_Mirror.mp4",
       "r2Key": "explainers/ch-03.mp4",
       "sizeBytes": 48386643,
+      "durationSeconds": null
+    },
+    "40": {
+      "chapter": 40,
+      "title": "Unlocking",
+      "localFile": "Ch_40_Unlocking.mp4",
+      "r2Key": "explainers/ch-40.mp4",
+      "sizeBytes": 34832311,
       "durationSeconds": null
     },
     "4": {
