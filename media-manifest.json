@@ -361,12 +361,92 @@
       "sizeBytes": 32153073,
       "durationSeconds": null
     },
+    "51": {
+      "chapter": 51,
+      "title": "Influence others without demanding respect",
+      "localFile": "Ch_51_Influence_others_without_demanding_respect.m4a",
+      "r2Key": "podcasts/ch-51.m4a",
+      "sizeBytes": 7897627,
+      "durationSeconds": null
+    },
+    "52": {
+      "chapter": 52,
+      "title": "Ending Modern Burnout at the Root",
+      "localFile": "Ch_52_Ending_Modern_Burnout_at_the_Root.m4a",
+      "r2Key": "podcasts/ch-52.m4a",
+      "sizeBytes": 7555367,
+      "durationSeconds": null
+    },
+    "53": {
+      "chapter": 53,
+      "title": "Laozi’s Warning Against Robbery Dressed in Silk",
+      "localFile": "Ch_53_Laozi’s_Warning_Against_Robbery_Dressed_in_Silk.m4a",
+      "r2Key": "podcasts/ch-53.m4a",
+      "sizeBytes": 10329418,
+      "durationSeconds": null
+    },
+    "54": {
+      "chapter": 54,
+      "title": "Build a life that cannot be uprooted",
+      "localFile": "Ch_54_Build_a_life_that_cannot_be_uprooted.m4a",
+      "r2Key": "podcasts/ch-54.m4a",
+      "sizeBytes": 10106685,
+      "durationSeconds": null
+    },
+    "55": {
+      "chapter": 55,
+      "title": "Why a baby is truly invincible",
+      "localFile": "Ch_55_Why_a_baby_is_truly_invincible.m4a",
+      "r2Key": "podcasts/ch-55.m4a",
+      "sizeBytes": 9848093,
+      "durationSeconds": null
+    },
+    "56": {
+      "chapter": 56,
+      "title": "Why Those Who Know Don t Talk",
+      "localFile": "Ch_56_Why_Those_Who_Know_Don_t_Talk.m4a",
+      "r2Key": "podcasts/ch-56.m4a",
+      "sizeBytes": 8692077,
+      "durationSeconds": null
+    },
+    "57": {
+      "chapter": 57,
+      "title": "Winning the World by Leaving It Alone",
+      "localFile": "Ch_57_Winning_the_World_by_Leaving_It_Alone.m4a",
+      "r2Key": "podcasts/ch-57.m4a",
+      "sizeBytes": 9317464,
+      "durationSeconds": null
+    },
+    "58": {
+      "chapter": 58,
+      "title": "Fortune and Misfortune Are Tangled Together",
+      "localFile": "Ch_58_Fortune_and_Misfortune_Are_Tangled_Together.m4a",
+      "r2Key": "podcasts/ch-58.m4a",
+      "sizeBytes": 9595478,
+      "durationSeconds": null
+    },
+    "59": {
+      "chapter": 59,
+      "title": "Why Taoist Moderation Is a Superpower",
+      "localFile": "Ch_59_Why_Taoist_Moderation_Is_a_Superpower.m4a",
+      "r2Key": "podcasts/ch-59.m4a",
+      "sizeBytes": 9456529,
+      "durationSeconds": null
+    },
     "5": {
       "chapter": 5,
       "title": "Stop Taking the Universe Personally",
       "localFile": "Ch_5_Stop_Taking_the_Universe_Personally.m4a",
       "r2Key": "podcasts/ch-05.m4a",
       "sizeBytes": 37955168,
+      "durationSeconds": null
+    },
+    "60": {
+      "chapter": 60,
+      "title": "Stop Poking the Small Fish",
+      "localFile": "Ch_60_Stop_Poking_the_Small_Fish.m4a",
+      "r2Key": "podcasts/ch-60.m4a",
+      "sizeBytes": 8085997,
       "durationSeconds": null
     },
     "6": {
@@ -763,12 +843,92 @@
       "sizeBytes": 43351893,
       "durationSeconds": null
     },
+    "51": {
+      "chapter": 51,
+      "title": "The Authority Spectrum (Spontaneous vs",
+      "localFile": "Ch_51_The_Authority_Spectrum_(Spontaneous_vs.mp4",
+      "r2Key": "explainers/ch-51.mp4",
+      "sizeBytes": 60194393,
+      "durationSeconds": null
+    },
+    "52": {
+      "chapter": 52,
+      "title": "The Architecture of Root Causes",
+      "localFile": "Ch_52_The_Architecture_of_Root_Causes.mp4",
+      "r2Key": "explainers/ch-52.mp4",
+      "sizeBytes": 57031235,
+      "durationSeconds": null
+    },
+    "53": {
+      "chapter": 53,
+      "title": "Robbery Dressed in Silk",
+      "localFile": "Ch_53_Robbery_Dressed_in_Silk.mp4",
+      "r2Key": "explainers/ch-53.mp4",
+      "sizeBytes": 49699965,
+      "durationSeconds": null
+    },
+    "54": {
+      "chapter": 54,
+      "title": "Rooted Cultivation",
+      "localFile": "Ch_54_Rooted_Cultivation.mp4",
+      "r2Key": "explainers/ch-54.mp4",
+      "sizeBytes": 50728374,
+      "durationSeconds": null
+    },
+    "55": {
+      "chapter": 55,
+      "title": "Vitality of the Newborn",
+      "localFile": "Ch_55_Vitality_of_the_Newborn.mp4",
+      "r2Key": "explainers/ch-55.mp4",
+      "sizeBytes": 41656939,
+      "durationSeconds": null
+    },
+    "56": {
+      "chapter": 56,
+      "title": "Unpacking Chapter 56",
+      "localFile": "Ch_56_Unpacking_Chapter_56.mp4",
+      "r2Key": "explainers/ch-56.mp4",
+      "sizeBytes": 34501801,
+      "durationSeconds": null
+    },
+    "57": {
+      "chapter": 57,
+      "title": "Winning by Leaving It Alone",
+      "localFile": "Ch_57_Winning_by_Leaving_It_Alone.mp4",
+      "r2Key": "explainers/ch-57.mp4",
+      "sizeBytes": 52845179,
+      "durationSeconds": null
+    },
+    "58": {
+      "chapter": 58,
+      "title": "Fortune   Misfortune",
+      "localFile": "Ch_58_Fortune___Misfortune.mp4",
+      "r2Key": "explainers/ch-58.mp4",
+      "sizeBytes": 38982376,
+      "durationSeconds": null
+    },
+    "59": {
+      "chapter": 59,
+      "title": "Moderation as the Deepest Root",
+      "localFile": "Ch_59_Moderation_as_the_Deepest_Root.mp4",
+      "r2Key": "explainers/ch-59.mp4",
+      "sizeBytes": 46698998,
+      "durationSeconds": null
+    },
     "5": {
       "chapter": 5,
       "title": "Heaven's Impartial Bellows",
       "localFile": "Ch_5_Heaven_s_Impartial_Bellows.mp4",
       "r2Key": "explainers/ch-05.mp4",
       "sizeBytes": 51554113,
+      "durationSeconds": null
+    },
+    "60": {
+      "chapter": 60,
+      "title": "Govern Like Cooking",
+      "localFile": "Ch_60_Govern_Like_Cooking.mp4",
+      "r2Key": "explainers/ch-60.mp4",
+      "sizeBytes": 41564953,
       "durationSeconds": null
     },
     "6": {
