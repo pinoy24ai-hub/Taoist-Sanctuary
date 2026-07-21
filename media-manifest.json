@@ -449,12 +449,92 @@
       "sizeBytes": 8085997,
       "durationSeconds": null
     },
+    "61": {
+      "chapter": 61,
+      "title": "Why great powers yield first",
+      "localFile": "Ch_61_Why_great_powers_yield_first.m4a",
+      "r2Key": "podcasts/ch-61.m4a",
+      "sizeBytes": 7509051,
+      "durationSeconds": null
+    },
+    "62": {
+      "chapter": 62,
+      "title": "A Shelter for the Imperfect",
+      "localFile": "Ch_62_A_Shelter_for_the_Imperfect.m4a",
+      "r2Key": "podcasts/ch-62.m4a",
+      "sizeBytes": 33585610,
+      "durationSeconds": null
+    },
+    "63": {
+      "chapter": 63,
+      "title": "Solve Massive Ch 63 Problems While They Are Easy",
+      "localFile": "Ch_63_Solve_Massive_Ch_63_Problems_While_They_Are_Easy.m4a",
+      "r2Key": "podcasts/ch-63.m4a",
+      "sizeBytes": 9680757,
+      "durationSeconds": null
+    },
+    "64": {
+      "chapter": 64,
+      "title": "True Meaning of a Single Step",
+      "localFile": "Ch_64_True_Meaning_of_a_Single_Step.m4a",
+      "r2Key": "podcasts/ch-64.m4a",
+      "sizeBytes": 6710866,
+      "durationSeconds": null
+    },
+    "65": {
+      "chapter": 65,
+      "title": "Why Cunning Is A Leadership Thief",
+      "localFile": "Ch_65_Why_Cunning_Is_A_Leadership_Thief.m4a",
+      "r2Key": "podcasts/ch-65.m4a",
+      "sizeBytes": 7758678,
+      "durationSeconds": null
+    },
+    "66": {
+      "chapter": 66,
+      "title": "Lead others by staying below them",
+      "localFile": "Ch_66_Lead_others_by_staying_below_them.m4a",
+      "r2Key": "podcasts/ch-66.m4a",
+      "sizeBytes": 9747990,
+      "durationSeconds": null
+    },
+    "67": {
+      "chapter": 67,
+      "title": "Three Treasures for Endgame Courage",
+      "localFile": "Ch_67_Three_Treasures_for_Endgame_Courage.m4a",
+      "r2Key": "podcasts/ch-67.m4a",
+      "sizeBytes": 8002959,
+      "durationSeconds": null
+    },
+    "68": {
+      "chapter": 68,
+      "title": "The Strength of Not Contending",
+      "localFile": "Ch_68_The_Strength_of_Not_Contending.m4a",
+      "r2Key": "podcasts/ch-68.m4a",
+      "sizeBytes": 9410213,
+      "durationSeconds": null
+    },
+    "69": {
+      "chapter": 69,
+      "title": "Winning by refusing to strike first",
+      "localFile": "Ch_69_Winning_by_refusing_to_strike_first.m4a",
+      "r2Key": "podcasts/ch-69.m4a",
+      "sizeBytes": 8246610,
+      "durationSeconds": null
+    },
     "6": {
       "chapter": 6,
       "title": "Why Valleys Outlast Mountains",
       "localFile": "Ch_6_Why_Valleys_Outlast_Mountains.m4a",
       "r2Key": "podcasts/ch-06.m4a",
       "sizeBytes": 33765762,
+      "durationSeconds": null
+    },
+    "70": {
+      "chapter": 70,
+      "title": "Jade Beneath Plain Cloth",
+      "localFile": "Ch_70_Jade_Beneath_Plain_Cloth.m4a",
+      "r2Key": "podcasts/ch-70.m4a",
+      "sizeBytes": 9605937,
       "durationSeconds": null
     },
     "7": {
@@ -931,12 +1011,92 @@
       "sizeBytes": 41564953,
       "durationSeconds": null
     },
+    "61": {
+      "chapter": 61,
+      "title": "The True Shape of Power",
+      "localFile": "Ch_61_The_True_Shape_of_Power.mp4",
+      "r2Key": "explainers/ch-61.mp4",
+      "sizeBytes": 38254313,
+      "durationSeconds": null
+    },
+    "62": {
+      "chapter": 62,
+      "title": "A Refuge for Everyone",
+      "localFile": "Ch_62_A_Refuge_for_Everyone.mp4",
+      "r2Key": "explainers/ch-62.mp4",
+      "sizeBytes": 40180516,
+      "durationSeconds": null
+    },
+    "63": {
+      "chapter": 63,
+      "title": "Handling the Small",
+      "localFile": "Ch_63_Handling_the_Small.mp4",
+      "r2Key": "explainers/ch-63.mp4",
+      "sizeBytes": 47908528,
+      "durationSeconds": null
+    },
+    "64": {
+      "chapter": 64,
+      "title": "Reframing The Journey",
+      "localFile": "Ch_64_Reframing_The_Journey.mp4",
+      "r2Key": "explainers/ch-64.mp4",
+      "sizeBytes": 41765057,
+      "durationSeconds": null
+    },
+    "65": {
+      "chapter": 65,
+      "title": "Simplicity Over Cleverness",
+      "localFile": "Ch_65_Simplicity_Over_Cleverness.mp4",
+      "r2Key": "explainers/ch-65.mp4",
+      "sizeBytes": 33341034,
+      "durationSeconds": null
+    },
+    "66": {
+      "chapter": 66,
+      "title": "Becoming King by Staying Low",
+      "localFile": "Ch_66_Becoming_King_by_Staying_Low.mp4",
+      "r2Key": "explainers/ch-66.mp4",
+      "sizeBytes": 43555482,
+      "durationSeconds": null
+    },
+    "67": {
+      "chapter": 67,
+      "title": "The Three Treasures",
+      "localFile": "Ch_67_The_Three_Treasures.mp4",
+      "r2Key": "explainers/ch-67.mp4",
+      "sizeBytes": 56479016,
+      "durationSeconds": null
+    },
+    "68": {
+      "chapter": 68,
+      "title": "Wisdom of Not Contending",
+      "localFile": "Ch_68_Wisdom_of_Not_Contending.mp4",
+      "r2Key": "explainers/ch-68.mp4",
+      "sizeBytes": 44010048,
+      "durationSeconds": null
+    },
+    "69": {
+      "chapter": 69,
+      "title": "Win by Not Advancing First",
+      "localFile": "Ch_69_Win_by_Not_Advancing_First.mp4",
+      "r2Key": "explainers/ch-69.mp4",
+      "sizeBytes": 30812375,
+      "durationSeconds": null
+    },
     "6": {
       "chapter": 6,
       "title": "The Valley That Never Dies",
       "localFile": "Ch_6_The_Valley_That_Never_Dies.mp4",
       "r2Key": "explainers/ch-06.mp4",
       "sizeBytes": 39343235,
+      "durationSeconds": null
+    },
+    "70": {
+      "chapter": 70,
+      "title": "Jade Beneath Plain Cloth",
+      "localFile": "Ch_70_Jade_Beneath_Plain_Cloth.mp4",
+      "r2Key": "explainers/ch-70.mp4",
+      "sizeBytes": 31945206,
       "durationSeconds": null
     },
     "7": {
