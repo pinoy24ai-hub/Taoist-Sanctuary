@@ -537,12 +537,100 @@
       "sizeBytes": 9605937,
       "durationSeconds": null
     },
+    "71": {
+      "chapter": 71,
+      "title": "The Sickness of False Certainty",
+      "localFile": "Ch_71_The_Sickness_of_False_Certainty.m4a",
+      "r2Key": "podcasts/ch-71.m4a",
+      "sizeBytes": 24789087,
+      "durationSeconds": null
+    },
+    "72": {
+      "chapter": 72,
+      "title": "Gaining authority by stepping back",
+      "localFile": "Ch_72_Gaining_authority_by_stepping_back.m4a",
+      "r2Key": "podcasts/ch-72.m4a",
+      "sizeBytes": 36706403,
+      "durationSeconds": null
+    },
+    "73": {
+      "chapter": 73,
+      "title": "Why the boldest move is restraint",
+      "localFile": "Ch_73_Why_the_boldest_move_is_restraint.m4a",
+      "r2Key": "podcasts/ch-73.m4a",
+      "sizeBytes": 39011829,
+      "durationSeconds": null
+    },
+    "74": {
+      "chapter": 74,
+      "title": "Put Down the Master Carpenter's Axe",
+      "localFile": "Ch_74_Put_Down_the_Master_Carpenter_s_Axe.m4a",
+      "r2Key": "podcasts/ch-74.m4a",
+      "sizeBytes": 38248087,
+      "durationSeconds": null
+    },
+    "75": {
+      "chapter": 75,
+      "title": "Why gripping tighter makes everything fail",
+      "localFile": "Ch_75_Why_gripping_tighter_makes_everything_fail.m4a",
+      "r2Key": "podcasts/ch-75.m4a",
+      "sizeBytes": 37672672,
+      "durationSeconds": null
+    },
+    "76": {
+      "chapter": 76,
+      "title": "Why Staying Soft Is Your Greatest Strength",
+      "localFile": "Ch_76_Why_Staying_Soft_Is_Your_Greatest_Strength.m4a",
+      "r2Key": "podcasts/ch-76.m4a",
+      "sizeBytes": 36156351,
+      "durationSeconds": null
+    },
+    "77": {
+      "chapter": 77,
+      "title": "Why Nature Balances and Humans Hoard",
+      "localFile": "Ch_77_Why_Nature_Balances_and_Humans_Hoard.m4a",
+      "r2Key": "podcasts/ch-77.m4a",
+      "sizeBytes": 21994119,
+      "durationSeconds": null
+    },
+    "78": {
+      "chapter": 78,
+      "title": "Why yielding defeats the strong",
+      "localFile": "Ch_78_Why_yielding_defeats_the_strong.m4a",
+      "r2Key": "podcasts/ch-78.m4a",
+      "sizeBytes": 34544408,
+      "durationSeconds": null
+    },
+    "79": {
+      "chapter": 79,
+      "title": "Stop collecting on emotional debts",
+      "localFile": "Ch_79_Stop_collecting_on_emotional_debts.m4a",
+      "r2Key": "podcasts/ch-79.m4a",
+      "sizeBytes": 32559578,
+      "durationSeconds": null
+    },
     "7": {
       "chapter": 7,
       "title": "Why the Sage Finishes First",
       "localFile": "Ch_7_Why_the_Sage_Finishes_First.m4a",
       "r2Key": "podcasts/ch-07.m4a",
       "sizeBytes": 38953560,
+      "durationSeconds": null
+    },
+    "80": {
+      "chapter": 80,
+      "title": "The ancient antidote to modern FOMO",
+      "localFile": "Ch_80_The_ancient_antidote_to_modern_FOMO.m4a",
+      "r2Key": "podcasts/ch-80.m4a",
+      "sizeBytes": 37310989,
+      "durationSeconds": null
+    },
+    "81": {
+      "chapter": 81,
+      "title": "Why Sincere Words Are Not Beautiful",
+      "localFile": "Ch_81_Why_Sincere_Words_Are_Not_Beautiful.m4a",
+      "r2Key": "podcasts/ch-81.m4a",
+      "sizeBytes": 23358675,
       "durationSeconds": null
     },
     "8": {
@@ -1099,12 +1187,100 @@
       "sizeBytes": 31945206,
       "durationSeconds": null
     },
+    "71": {
+      "chapter": 71,
+      "title": "Sickness of Certainty",
+      "localFile": "Ch_71_Sickness_of_Certainty.mp4",
+      "r2Key": "explainers/ch-71.mp4",
+      "sizeBytes": 37294828,
+      "durationSeconds": null
+    },
+    "72": {
+      "chapter": 72,
+      "title": "Leading Without Force",
+      "localFile": "Ch_72_Leading_Without_Force.mp4",
+      "r2Key": "explainers/ch-72.mp4",
+      "sizeBytes": 58628422,
+      "durationSeconds": null
+    },
+    "73": {
+      "chapter": 73,
+      "title": "Heaven's Wide, Patient Net",
+      "localFile": "Ch_73_Heaven_s_Wide,_Patient_Net.mp4",
+      "r2Key": "explainers/ch-73.mp4",
+      "sizeBytes": 39461511,
+      "durationSeconds": null
+    },
+    "74": {
+      "chapter": 74,
+      "title": "Limits of Fear and Power",
+      "localFile": "Ch_74_Limits_of_Fear_and_Power.mp4",
+      "r2Key": "explainers/ch-74.mp4",
+      "sizeBytes": 41938724,
+      "durationSeconds": null
+    },
+    "75": {
+      "chapter": 75,
+      "title": "When Overreach Backfires",
+      "localFile": "Ch_75_When_Overreach_Backfires.mp4",
+      "r2Key": "explainers/ch-75.mp4",
+      "sizeBytes": 47739043,
+      "durationSeconds": null
+    },
+    "76": {
+      "chapter": 76,
+      "title": "Strength in Softness",
+      "localFile": "Ch_76_Strength_in_Softness.mp4",
+      "r2Key": "explainers/ch-76.mp4",
+      "sizeBytes": 40323516,
+      "durationSeconds": null
+    },
+    "77": {
+      "chapter": 77,
+      "title": "The Bow That Balances Itself",
+      "localFile": "Ch_77_The_Bow_That_Balances_Itself.mp4",
+      "r2Key": "explainers/ch-77.mp4",
+      "sizeBytes": 35677967,
+      "durationSeconds": null
+    },
+    "78": {
+      "chapter": 78,
+      "title": "Paradox of Yielding",
+      "localFile": "Ch_78_Paradox_of_Yielding.mp4",
+      "r2Key": "explainers/ch-78.mp4",
+      "sizeBytes": 44372843,
+      "durationSeconds": null
+    },
+    "79": {
+      "chapter": 79,
+      "title": "The Grudge That Doesn t Heal",
+      "localFile": "Ch_79_The_Grudge_That_Doesn_t_Heal.mp4",
+      "r2Key": "explainers/ch-79.mp4",
+      "sizeBytes": 40187722,
+      "durationSeconds": null
+    },
     "7": {
       "chapter": 7,
       "title": "Enduring by Letting Go",
       "localFile": "Ch_7_Enduring_by_Letting_Go.mp4",
       "r2Key": "explainers/ch-07.mp4",
       "sizeBytes": 41998800,
+      "durationSeconds": null
+    },
+    "80": {
+      "chapter": 80,
+      "title": "The Small State",
+      "localFile": "Ch_80_The_Small_State.mp4",
+      "r2Key": "explainers/ch-80.mp4",
+      "sizeBytes": 38148180,
+      "durationSeconds": null
+    },
+    "81": {
+      "chapter": 81,
+      "title": "The Sage Who Keeps Nothing",
+      "localFile": "Ch_81_The_Sage_Who_Keeps_Nothing.mp4",
+      "r2Key": "explainers/ch-81.mp4",
+      "sizeBytes": 58446519,
       "durationSeconds": null
     },
     "8": {
